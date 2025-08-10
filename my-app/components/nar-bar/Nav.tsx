@@ -6,8 +6,11 @@ import { useEffect, useState } from "react";
 import { BiDownload } from "react-icons/bi";
 import { FaCode } from "react-icons/fa";
 import { HiBars3BottomRight } from "react-icons/hi2";
-
-export default function Nav() {
+import { BiShow } from "react-icons/bi";
+type Props = {
+  openNav: () => void;
+};
+export default function Nav({ openNav }: Props) {
   const [navBg, setNavBg] = useState(false);
   useEffect(() => {
     const handeler = () => {
@@ -31,7 +34,7 @@ export default function Nav() {
             <FaCode className="w-5 h-5 text-black" />
           </div>
           <h1 className="text-xl hidden sm:block md:text-2xl text-white font-bold">
-            phanuel arsene
+            Phanuel Arsene
           </h1>
         </div>
         {/* nav */}
@@ -49,13 +52,22 @@ export default function Nav() {
         {/* button */}
         <div className="flex items-center space-x-4">
           {/* Cv button */}
-          <button className="px-8 py-3.5 text-sm cursor-pointer rounded-lg bg-blue-800 hover:bg-blue-600 transition-all  duration-300 text-white flex items-center space-x-2">
-            <BiDownload className="w-5 h-5" />
-            <span> Download CV</span>
+          <button
+            className="px-8 py-3.5 text-sm cursor-pointer rounded-lg bg-blue-800 hover:bg-blue-600 transition-all duration-300 text-white flex items-center space-x-2"
+            onClick={() => {
+              // Ouvre ta modale ou redirige vers projet perso
+              console.log("Afficher détails projet personnel");
+            }}
+          >
+            <BiShow className="w-5 h-5" />
+            <span>Voir projet personnel</span>
           </button>
         </div>
         {/* Burger Menu  */}
-        <HiBars3BottomRight className="w-8 h-8 cursor-pointer text-white lg:hidden" />
+        <HiBars3BottomRight
+          onClick={openNav}
+          className="w-8 h-8 cursor-pointer text-white lg:hidden"
+        />
       </div>
     </div>
   );
