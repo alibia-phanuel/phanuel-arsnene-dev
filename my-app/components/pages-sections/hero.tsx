@@ -17,7 +17,7 @@ const Hero = () => {
           className="rounded-full border-8 border-[#0c0c4a]"
         />
         <h1 className="text-2xl my-2 sm:text-4xl md:text-5xl lg:text-6xl text-center">
-          Développeur – Web et Mobile <br />
+          – Développeur – <br />
           <span className="text-cyan-200  relative top-4">
             JavaScript | TypeScript | Node.js | IA
           </span>
