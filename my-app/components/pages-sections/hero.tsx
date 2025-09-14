@@ -33,7 +33,7 @@ const Hero = () => {
                   "React",
                   "Next.js",
                   "express",
-                  "Intégration IA & automatisation",
+                  // "Intégration IA & automatisation",
                 ],
                 autoStart: true,
                 loop: true,

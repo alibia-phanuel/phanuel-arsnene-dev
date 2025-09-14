@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, Phone, Facebook } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa"; // Import de l'icône WhatsApp
 
 const testimonials = [
   {
@@ -21,6 +22,7 @@ const testimonials = [
       "Alibia a livré notre projet à temps avec une qualité exceptionnelle. Toujours à l'écoute et force de proposition.",
     photo: "https://randomuser.me/api/portraits/men/32.jpg",
     phone: "+237600000001",
+    whatsapp: "+237600000001", // Numéro WhatsApp ajouté
     facebook: "https://facebook.com/jeandupont",
     countryCode: "fr", // 🇫🇷 France
   },
@@ -31,6 +33,7 @@ const testimonials = [
       "Travailler avec Alibia est un vrai plaisir. Son organisation et sa capacité à résoudre les problèmes sont remarquables.",
     photo: "https://randomuser.me/api/portraits/women/65.jpg",
     phone: "+237600000002",
+    whatsapp: "+237600000002",
     facebook: "https://facebook.com/sarahndiaye",
     countryCode: "sn", // 🇸🇳 Sénégal
   },
@@ -41,6 +44,7 @@ const testimonials = [
       "Toujours professionnel, réactif et passionné. Je recommande vivement Alibia pour tout projet tech.",
     photo: "https://randomuser.me/api/portraits/men/74.jpg",
     phone: "+237600000003",
+    whatsapp: "+237600000003",
     facebook: "https://facebook.com/mohamedtraore",
     countryCode: "ml", // 🇲🇱 Mali
   },
@@ -51,6 +55,7 @@ const testimonials = [
       "Son sens du travail en équipe est exceptionnel. Il sait motiver et guider tout le monde.",
     photo: "https://randomuser.me/api/portraits/women/44.jpg",
     phone: "+237600000004",
+    whatsapp: "+237600000004",
     facebook: "https://facebook.com/laurabemba",
     countryCode: "cm", // 🇨🇲 Cameroun
   },
@@ -61,6 +66,7 @@ const testimonials = [
       "Professionnalisme et vision long terme, j’ai beaucoup appris grâce à ce projet.",
     photo: "https://randomuser.me/api/portraits/men/56.jpg",
     phone: "+237600000005",
+    whatsapp: "+237600000005",
     facebook: "https://facebook.com/alignuessan",
     countryCode: "ci", // 🇨🇮 Côte d’Ivoire
   },
@@ -71,6 +77,7 @@ const testimonials = [
       "Toujours dans une logique d’innovation et de partage. Collaboration agréable.",
     photo: "https://randomuser.me/api/portraits/women/22.jpg",
     phone: "+237600000006",
+    whatsapp: "+237600000006",
     facebook: "https://facebook.com/cynthiambarga",
     countryCode: "cm", // 🇨🇲 Cameroun
   },
@@ -81,6 +88,7 @@ const testimonials = [
       "Alibia a su comprendre mes besoins et livrer une solution robuste.",
     photo: "https://randomuser.me/api/portraits/men/12.jpg",
     phone: "+237600000007",
+    whatsapp: "+237600000007",
     facebook: "https://facebook.com/pierretchatchoua",
     countryCode: "cm", // 🇨🇲 Cameroun
   },
@@ -91,6 +99,7 @@ const testimonials = [
       "Alibia est une personne de confiance, toujours prête à aider l’équipe.",
     photo: "https://randomuser.me/api/portraits/women/28.jpg",
     phone: "+237600000008",
+    whatsapp: "+237600000008",
     facebook: "https://facebook.com/aminatadiallo",
     countryCode: "gn", // 🇬🇳 Guinée
   },
@@ -100,6 +109,7 @@ const testimonials = [
     feedback: "Une grande maîtrise technique et une communication très claire.",
     photo: "https://randomuser.me/api/portraits/men/87.jpg",
     phone: "+237600000009",
+    whatsapp: "+237600000009",
     facebook: "https://facebook.com/josephetoundi",
     countryCode: "cm", // 🇨🇲 Cameroun
   },
@@ -110,6 +120,7 @@ const testimonials = [
       "Toujours orienté résultats, il ne lâche rien jusqu’à ce que ce soit parfait.",
     photo: "https://randomuser.me/api/portraits/women/91.jpg",
     phone: "+237600000010",
+    whatsapp: "+237600000010",
     facebook: "https://facebook.com/fatoukane",
     countryCode: "sn", // 🇸🇳 Sénégal
   },
@@ -123,6 +134,14 @@ export default function TestimonialsCarousel() {
     setCurrent(
       (prev) => (prev - 1 + testimonials.length) % testimonials.length
     );
+
+  // Fonction pour générer le lien WhatsApp avec un message par défaut
+  const getWhatsAppUrl = (phone: string) => {
+    const message = encodeURIComponent(
+      `Bonjour ${testimonials[current].name}, je vous contacte concernant votre témoignage pour Alibia.`
+    );
+    return `https://wa.me/${phone}?text=${message}`;
+  };
 
   return (
     <section className="py-12 bg-[#010104] text-white">
@@ -171,6 +190,14 @@ export default function TestimonialsCarousel() {
                 className="flex items-center gap-2 px-3 py-2 bg-green-600 text-white rounded-xl hover:bg-green-700 transition"
               >
                 <Phone className="w-4 h-4" /> Appeler
+              </a>
+              <a
+                href={getWhatsAppUrl(testimonials[current].whatsapp)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-2 bg-green-500 text-white rounded-xl hover:bg-green-600 transition"
+              >
+                <FaWhatsapp className="w-4 h-4" /> WhatsApp
               </a>
               <a
                 href={testimonials[current].facebook}

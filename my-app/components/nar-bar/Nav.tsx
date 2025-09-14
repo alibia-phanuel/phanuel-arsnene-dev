@@ -1,8 +1,6 @@
+// components/nar-bar/Nav.tsx
 "use client";
 
-// Make sure to install animate.css: `npm install animate.css`
-// Make sure to install react-icons: `npm install react-icons`
-// Make sure to install shadcn/ui dialog and card: `npx shadcn-ui@latest add dialog card`
 import { NavLinks } from "@/constant/constant";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -27,9 +25,10 @@ import "animate.css";
 
 type Props = {
   openNav: () => void;
+  activeSection: string;
 };
 
-export default function Nav({ openNav }: Props) {
+export default function Nav({ openNav, activeSection }: Props) {
   const [navBg, setNavBg] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCardAnimated, setIsCardAnimated] = useState(false);
@@ -39,7 +38,7 @@ export default function Nav({ openNav }: Props) {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 90) setNavBg(true);
-      if (window.scrollY < 90) setNavBg(false);
+      else setNavBg(false);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -47,14 +46,13 @@ export default function Nav({ openNav }: Props) {
 
   useEffect(() => {
     if (isModalOpen) {
-      // Trigger initial animation when modal opens with a slight delay
       const timer = setTimeout(() => {
         setIsCardAnimated(true);
       }, 100);
       return () => clearTimeout(timer);
     } else {
       setIsCardAnimated(false);
-      setScrollOffset(0); // Reset scroll offset when modal closes
+      setScrollOffset(0);
     }
   }, [isModalOpen]);
 
@@ -62,7 +60,6 @@ export default function Nav({ openNav }: Props) {
     const handleModalScroll = () => {
       if (dialogContentRef.current) {
         const scrollTop = dialogContentRef.current.scrollTop;
-        // Move card upward (max -50px) based on scroll, then ease back
         const offset = Math.min(scrollTop * 0.5, 50) * -1;
         setScrollOffset(offset);
       }
@@ -79,6 +76,20 @@ export default function Nav({ openNav }: Props) {
       }
     };
   }, [isModalOpen]);
+
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    url: string
+  ) => {
+    if (url.startsWith("#")) {
+      e.preventDefault();
+      const targetId = url.slice(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   return (
     <div
@@ -102,7 +113,12 @@ export default function Nav({ openNav }: Props) {
             <Link
               key={link.id}
               href={link.url}
-              className="text-white hover:text-gray-300"
+              className={`text-white hover:text-gray-300 transition-colors ${
+                activeSection === link.url.slice(1)
+                  ? "text-blue-400 font-semibold border-b-2 border-blue-400"
+                  : ""
+              }`}
+              onClick={(e) => handleLinkClick(e, link.url)}
             >
               {link.label}
             </Link>

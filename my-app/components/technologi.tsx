@@ -6,6 +6,7 @@ import {
   SiNextdotjs,
   SiReact,
   SiTypescript,
+  SiJavascript,
   SiNodedotjs,
   SiExpress,
   SiNestjs,
@@ -29,9 +30,16 @@ const Technologi = () => {
       icon: <SiReact className="w-12 h-12 text-blue-400" />,
       description: "Applications mobiles multiplateformes fluides.",
     },
+    ,
+    {
+      name: "JavaScript",
+      icon: <SiJavascript className="w-12 h-12 text-yellow-400" />,
+      description:
+        "Langage de programmation pour des applications web interactives.",
+    },
     {
       name: "TypeScript",
-      icon: <SiTypescript className="w-12 h-12 text-yellow-400" />,
+      icon: <SiTypescript className="w-12 h-12  text-blue-400" />,
       description:
         "JavaScript typé pour des applications robustes et évolutives.",
     },
@@ -52,17 +60,16 @@ const Technologi = () => {
       description:
         "Framework structuré pour des applications backend évolutives.",
     },
-    {
-      name: "Intégration IA",
-      icon: <FaBrain className="w-12 h-12 text-purple-400" />,
-      description: "Intégration d'IA pour des solutions intelligentes.",
-    },
+    // {
+    //   name: "Intégration IA",
+    //   icon: <FaBrain className="w-12 h-12 text-purple-400" />,
+    //   description: "Intégration d'IA pour des solutions intelligentes.",
+    // },
   ];
 
-  const [isVisible, setIsVisible] = useState<boolean[]>(
-    Array(technologies.length).fill(false)
-  );
+  const [isVisible, setIsVisible] = useState(false);
 
+  const gridRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const [rotations, setRotations] = useState<
@@ -72,27 +79,23 @@ const Technologi = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsVisible((prev) => {
-              const newVisible = [...prev];
-              newVisible[index] = true;
-              return newVisible;
-            });
+            setIsVisible(true);
           }
         });
       },
       { threshold: 0.1 }
     );
 
-    cardRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
+    if (gridRef.current) {
+      observer.observe(gridRef.current);
+    }
 
     return () => {
-      cardRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
-      });
+      if (gridRef.current) {
+        observer.unobserve(gridRef.current);
+      }
     };
   }, []);
 
@@ -133,7 +136,10 @@ const Technologi = () => {
         <h2 className="text-3xl font-bold text-center text-white mb-8">
           Mes Technologies
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          ref={gridRef}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
           {technologies.map((tech, index) => (
             <Card
               key={index}
@@ -141,9 +147,7 @@ const Technologi = () => {
                 cardRefs.current[index] = el;
               }}
               className={`bg-gray-900 border-gray-800 text-gray-300 transform transition-all duration-300 hover:scale-105 hover:shadow-xl ${
-                isVisible[index]
-                  ? "animate__animated animate__fadeInUp"
-                  : "opacity-0"
+                isVisible ? "animate__animated animate__fadeInUp" : "opacity-0"
               }`}
               style={{
                 transform: `perspective(1000px) rotateX(${
@@ -155,13 +159,13 @@ const Technologi = () => {
               onMouseLeave={() => handleMouseLeave(index)}
             >
               <CardHeader className="flex justify-center">
-                {tech.icon}
+                {tech?.icon}
               </CardHeader>
               <CardContent className="text-center">
                 <CardTitle className="text-xl text-white mb-2">
-                  {tech.name}
+                  {tech?.name}
                 </CardTitle>
-                <p className="text-gray-300 text-sm">{tech.description}</p>
+                <p className="text-gray-300 text-sm">{tech?.description}</p>
               </CardContent>
             </Card>
           ))}

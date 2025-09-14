@@ -1,20 +1,38 @@
+// components/nar-bar/MobilNav.tsx
 import { NavLinks } from "@/constant/constant";
 import Link from "next/link";
 import React from "react";
 import { CgClose } from "react-icons/cg";
+
 type Props = {
   showNav: boolean;
   closeNav: () => void;
+  activeSection: string;
 };
 
-/*******  1b935ba7-23a1-4a90-8acb-967340d26361  *******/
-const MobilNav = ({ showNav, closeNav }: Props) => {
+const MobilNav = ({ showNav, closeNav, activeSection }: Props) => {
   const navOpen = showNav ? "translate-x-0" : "translate-x-full";
+
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    url: string
+  ) => {
+    if (url.startsWith("#")) {
+      e.preventDefault();
+      const targetId = url.slice(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+      closeNav(); // Ferme le menu après le clic
+    }
+  };
+
   return (
     <div>
       {/* backdrop */}
       <div
-        className={`fixed insert-0 ${navOpen} transform transition-all right-0 duration-500 z-[10002] bg-black opacity-70 w-full h-screen`}
+        className={`fixed inset-0 ${navOpen} transform transition-all right-0 duration-500 z-[10002] bg-black opacity-70 w-full h-screen`}
       ></div>
       {/* navlinks */}
       <div
@@ -24,7 +42,12 @@ const MobilNav = ({ showNav, closeNav }: Props) => {
           <div key={link.id}>
             <Link
               href={link.url}
-              className="text-white  w-fit text-xl ml-12 border-b-[1.5px] pb-1 border-white sm:text-[30px]"
+              className={`text-white w-fit text-xl ml-12 border-b-[1.5px] pb-1 sm:text-[30px] ${
+                activeSection === link.url.slice(1)
+                  ? "text-blue-400 border-blue-400"
+                  : "border-white"
+              }`}
+              onClick={(e) => handleLinkClick(e, link.url)}
             >
               {link.label}
             </Link>
