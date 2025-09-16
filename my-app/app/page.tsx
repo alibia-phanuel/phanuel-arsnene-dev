@@ -83,7 +83,7 @@ export default function Home() {
           <SoftSkills />
         </section>
         <section
-          className="h"
+       
           id="temoignages"
           ref={(el) => {
             sectionRefs.current.temoignages = el;

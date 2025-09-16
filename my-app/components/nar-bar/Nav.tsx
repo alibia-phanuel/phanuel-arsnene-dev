@@ -127,7 +127,7 @@ export default function Nav({ openNav, activeSection }: Props) {
         {/* button */}
         <div className="flex items-center space-x-4">
           <button
-            className="px-8 py-3.5 text-sm cursor-pointer rounded-lg bg-blue-800 hover:bg-blue-600 transition-all duration-300 text-white flex items-center space-x-2"
+            className="px-4 py-2 text-sm cursor-pointer rounded-lg bg-blue-800 hover:bg-blue-600 transition-all duration-300 text-white flex items-center space-x-2"
             onClick={() => setIsModalOpen(true)}
           >
             <BiShow className="w-5 h-5" />
@@ -144,24 +144,26 @@ export default function Nav({ openNav, activeSection }: Props) {
       {/* Modal */}
       <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
         <DialogContent
-          className="bg-gray-900 text-gray-300 max-w-3xl"
+          className="bg-gray-900 text-gray-300 w-full max-w-3xl p-4 sm:p-6 z-[10003] rounded-lg shadow-lg"
+          style={{ maxHeight: "90vh", overflowY: "auto" }}
           ref={dialogContentRef}
         >
           <DialogHeader>
-            <DialogTitle className="text-2xl text-white text-center">
+            <DialogTitle className="text-2xl sm:text-3xl text-white text-center">
               Projet Personnel
             </DialogTitle>
-            <DialogDescription className="text-gray-300">
+            <DialogDescription className="text-gray-300 text-sm sm:text-base mt-2">
               👋 Bonjour, je suis Phanuel Arsène, développeur d’applications web
               et mobile passionné, avec plus de 3 ans de formation et plus d’un
               an d’expérience en entreprise. 🚀 J’ai acquis un solide
-              savoir-faire en développement full-stack, couvrant aussi bien la
-              création de sites web que le développement mobile performant. 📱
+              savoir-faire en développement full-stack, couvrant la création de
+              sites web et le développement mobile performant. 📱
             </DialogDescription>
           </DialogHeader>
+
           <div className="mt-6 flex justify-center">
             <Card
-              className={`bg-gray-900 border-gray-800 text-gray-300 max-w-md w-full transform transition-all duration-300 hover:scale-105 hover:shadow-xl ${
+              className={`bg-gray-900 border-gray-800 text-gray-300 w-full sm:max-w-md transform transition-all duration-300 hover:scale-105 hover:shadow-xl ${
                 isCardAnimated
                   ? "animate__animated animate__fadeInUp"
                   : "opacity-0"
@@ -169,10 +171,12 @@ export default function Nav({ openNav, activeSection }: Props) {
               style={{ transform: `translateY(${scrollOffset}px)` }}
             >
               <CardHeader>
-                <CardTitle className="text-xl text-white">Alibia</CardTitle>
+                <CardTitle className="text-xl sm:text-2xl text-white">
+                  Alibia
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-300">
+                <p className="text-gray-300 text-sm sm:text-base">
                   Découvrez nos produits technologiques de qualité avec des
                   offres exclusives et un service client réactif. Une plateforme
                   complète incluant une page Facebook, un site e-commerce et une
@@ -181,8 +185,15 @@ export default function Nav({ openNav, activeSection }: Props) {
                   permis de développer des compétences en marketing digital et
                   communication.
                 </p>
+                <p className="text-gray-300 mt-4 text-sm sm:text-base">
+                  🎯 Objectif 2026 : me spécialiser dans les solutions FinTech,
+                  l’e-commerce et l’intégration de fonctionnalités IA avancées
+                  pour créer des applications intelligentes, performantes et
+                  innovantes.
+                </p>
               </CardContent>
-              <CardFooter className="flex justify-start space-x-4">
+
+              <CardFooter className="flex justify-start space-x-2 sm:space-x-4 mt-4">
                 <a
                   href="https://www.facebook.com/alibia"
                   target="_blank"
@@ -190,7 +201,7 @@ export default function Nav({ openNav, activeSection }: Props) {
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label="Page Facebook d'Alibia"
                 >
-                  <FaFacebook className="w-5 h-5" />
+                  <FaFacebook className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
                 <a
                   href="https://www.youtube.com/channel/alibia"
@@ -199,7 +210,7 @@ export default function Nav({ openNav, activeSection }: Props) {
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label="Chaîne YouTube d'Alibia"
                 >
-                  <FaYoutube className="w-5 h-5" />
+                  <FaYoutube className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
                 <a
                   href="https://www.alibia.tech/"
@@ -208,10 +219,11 @@ export default function Nav({ openNav, activeSection }: Props) {
                   className="text-gray-400 hover:text-white transition-colors"
                   aria-label="Site web d'Alibia"
                 >
-                  <FaGlobe className="w-5 h-5" />
+                  <FaGlobe className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
               </CardFooter>
-              <CardFooter className="text-sm text-gray-400">
+
+              <CardFooter className="text-sm sm:text-base text-gray-400 mt-2">
                 Projet en cours, 2023 - Présent
               </CardFooter>
             </Card>

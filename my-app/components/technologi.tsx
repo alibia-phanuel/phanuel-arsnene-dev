@@ -10,6 +10,9 @@ import {
   SiNodedotjs,
   SiExpress,
   SiNestjs,
+  SiJest,
+  SiPostman,
+  SiGoogleanalytics,
 } from "react-icons/si";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
@@ -30,7 +33,6 @@ const Technologi = () => {
       icon: <SiReact className="w-12 h-12 text-blue-400" />,
       description: "Applications mobiles multiplateformes fluides.",
     },
-    ,
     {
       name: "JavaScript",
       icon: <SiJavascript className="w-12 h-12 text-yellow-400" />,
@@ -60,11 +62,29 @@ const Technologi = () => {
       description:
         "Framework structuré pour des applications backend évolutives.",
     },
-    // {
-    //   name: "Intégration IA",
-    //   icon: <FaBrain className="w-12 h-12 text-purple-400" />,
-    //   description: "Intégration d'IA pour des solutions intelligentes.",
-    // },
+    {
+      name: "Jest",
+      icon: <SiJest className="w-12 h-12 text-pink-500" />,
+      description:
+        "Tests unitaires et d'intégration pour garantir la fiabilité du code.",
+    },
+    {
+      name: "Postman",
+      icon: <SiPostman className="w-12 h-12 text-orange-500" />,
+      description: "Validation et test des API REST pour un backend robuste.",
+    },
+    {
+      name: "Intégration IA",
+      icon: <FaBrain className="w-12 h-12 text-purple-400" />,
+      description:
+        "Conception de fonctionnalités intelligentes avec GPT, Grok et autres outils IA.",
+    },
+    {
+      name: "Google Analytics",
+      icon: <SiGoogleanalytics className="w-12 h-12 text-yellow-400" />,
+      description:
+        "Suivi et analyse des interactions utilisateurs pour optimiser les applications web et mobiles.",
+    },
   ];
 
   const [isVisible, setIsVisible] = useState(false);
@@ -134,7 +154,7 @@ const Technologi = () => {
     <div className="py-12 bg-[#010104]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-white mb-8">
-          Mes Technologies
+          Mes Technologies & outils de travail
         </h2>
         <div
           ref={gridRef}
