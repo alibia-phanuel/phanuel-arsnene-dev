@@ -13,7 +13,7 @@ interface Project {
   tags: string[];
   gitUrl: string;
   demoUrl: string;
-  category: "web" | "mobile" | "ia" | "web-mobile";
+  category: "web" | "mobile" | "web-mobile";
 }
 
 const Projets = () => {
@@ -52,7 +52,7 @@ const Projets = () => {
       tags: ["NestJS", "Intégration IA"],
       gitUrl: "https://github.com/user/ai-chatbot",
       demoUrl: "https://demo.ai-chatbot.com",
-      category: "ia",
+      category: "web",
     },
     {
       id: 4,
@@ -78,7 +78,6 @@ const Projets = () => {
     if (filter === "tous") return true;
     if (filter === "web") return project.category === "web";
     if (filter === "mobile") return project.category === "mobile";
-    if (filter === "ia") return project.category === "ia";
     if (filter === "web-mobile") return project.category === "web-mobile";
     return true;
   });
@@ -114,7 +113,7 @@ const Projets = () => {
         </h2>
         {/* Filtres */}
         <div className="flex justify-center mb-8 space-x-4 flex-wrap">
-          {["tous", "web", "mobile", "ia", "web-mobile"].map((cat) => (
+          {["tous", "web", "mobile", "web-mobile"].map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
@@ -130,9 +129,7 @@ const Projets = () => {
                 ? "Projet Web"
                 : cat === "mobile"
                 ? "Projet Mobile"
-                : cat === "ia"
-                ? "IA"
-                : "Web & Mobile + IA"}
+                : "Web & Mobile "}
             </button>
           ))}
         </div>

@@ -15,14 +15,22 @@ import {
 import ReactCountryFlag from "react-country-flag";
 
 const JobExp = () => {
-  const [isVisible, setIsVisible] = useState([false, false, false, false]);
+  const [isVisible, setIsVisible] = useState<boolean[]>([]);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  // Initialiser isVisible avec la bonne taille en fonction des expériences
+  useEffect(() => {
+    setIsVisible(new Array(experiences.length).fill(false));
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, index) => {
-          if (entry.isIntersecting) {
+        entries.forEach((entry) => {
+          const index = cardRefs.current.indexOf(
+            entry.target as HTMLDivElement
+          );
+          if (entry.isIntersecting && index !== -1) {
             setIsVisible((prev) => {
               const newVisible = [...prev];
               newVisible[index] = true;
@@ -31,7 +39,7 @@ const JobExp = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.2 } // Augmenter légèrement le seuil pour une meilleure détection
     );
 
     cardRefs.current.forEach((ref) => {
@@ -46,59 +54,86 @@ const JobExp = () => {
   }, []);
 
   const experiences = [
+    // Votre tableau d'expériences reste inchangé
     {
-      title: "Développeur Front-End",
-      company: "TechCorp France",
+      title: "Développement full-stack mobile",
+      company: "FORTIBTECH",
       description:
-        "Conception d'interfaces utilisateur dynamiques avec React et Next.js.",
-      duration: "Jan 2023 - Présent",
+        "En tant qu’employé, je fais la Conception d'interfaces utilisateur dynamiques avec React Native expo et Express API.",
+      duration: "De avr. 2025 à aujourd’hui · 6 mois",
       country: "France",
       countryCode: "FR",
-      workArrangement: "Au bureau",
+      workArrangement: "· À distance",
       socialLinks: {
-        linkedin: "https://www.linkedin.com/company/techcorp-france",
-        facebook: "https://www.facebook.com/techcorpfrance",
-        instagram: "https://www.instagram.com/techcorpfrance",
+        linkedin:
+          "https://www.linkedin.com/company/fortibtech/posts/?feedView=all",
+        instagram: "https://www.instagram.com/fortibtech?igsh=eXh1eXVwbnkzM2sz",
       },
     },
     {
-      title: "Stagiaire Développeur Web",
-      company: "WebSolutions Canada",
+      title: "Développeur Web Freelance",
+      company: "Client privé (Canada)",
       description:
-        "Contribution à des projets web avec HTML, CSS et JavaScript.",
-      duration: "Juin 2022 - Déc 2022",
+        "Développement d'une application de planification et de gestion de budget (front-end Next.js, back-end Express.js). Projet réalisé à distance sur 3 mois. Témoignage disponible dans la section Témoignages.",
+      duration: "Mai. 2025 - Juil. 2025 · 3 mois",
       country: "Canada",
       countryCode: "CA",
-      workArrangement: "Au bureau",
+      workArrangement: "À distance · Freelance",
       socialLinks: {
-        linkedin: "https://www.linkedin.com/company/websolutions-canada",
+        facebook: "https://www.facebook.com/karine.chahbi",
       },
     },
     {
-      title: "Freelance UI/UX Designer",
-      company: "DesignWorks UK",
+      title: "Front-End Developer",
+      company: "La Passerrel",
       description:
-        "Création de maquettes et prototypes pour applications mobiles.",
-      duration: "Mar 2021 - Mai 2022",
-      country: "Angleterre",
-      countryCode: "GB",
-      workArrangement: "Hybride",
+        "Création d'une landing page moderne et responsive, visible sur mobile (iOS & Android). Mission réalisée en collaboration avec l'équipe de La Passerrel à distance, en mettant l’accent sur le design et l’expérience utilisateur.",
+      duration: "Aout-sept. 2025 - 1 mois",
+      country: "Cameroun",
+      countryCode: "CM",
+      workArrangement: "À distance · Freelance",
       socialLinks: {
-        linkedin: "https://www.linkedin.com/company/designworks-uk",
-        instagram: "https://www.instagram.com/designworksuk",
+        facebook: "https://la-passerelle.co/",
       },
     },
     {
-      title: "Assistant Développeur",
-      company: "CodeBase Germany",
-      description: "Support technique et maintenance de sites web.",
-      duration: "Sep 2020 - Fév 2021",
-      country: "Allemagne",
-      countryCode: "DE",
-      workArrangement: "À distance",
+      title: "Front-End Developer",
+      company: "IS Dev Experts S.A.S",
+      description:
+        "En tant qu’employé, j’ai participé au développement d’applications web et mobiles front-end, en concevant et implémentant des interfaces interactives et en intégrant les données via des API fiables.",
+      duration: "janv. 2024 - juil. 2025 · 1 an 7 mois",
+      country: "Cameroun",
+      countryCode: "CM",
+      workArrangement: "Hybride · Temps plein",
       socialLinks: {
-        linkedin: "https://www.linkedin.com/company/codebase-germany",
-        facebook: "https://www.facebook.com/codebasegermany",
+        linkedin: "https://www.linkedin.com/company/isdevexperts/",
+      },
+    },
+    {
+      title: "Technicien Informatique ",
+      company: "General Stores Sarl",
+      description:
+        "Maintenance et réparation de matériel informatique (PC, périphériques) et support technique aux utilisateurs pour assurer le bon fonctionnement des équipements informatiques.",
+      duration: "Aout 2021 - Sept 2022",
+      country: "Cameroun",
+      countryCode: "CM",
+      workArrangement: "Au bureau · Temps plein 1 an",
+      socialLinks: {
+        facebook: "https://www.facebook.com/generalstores.net/",
+      },
+    },
+    {
+      title: "Fondateur & Développeur",
+      company: "Alibia Tech",
+      description:
+        "Projet personnel professionnel visant à renforcer mes compétences en développement web et mobile, communication et marketing. Conception et développement d’applications, gestion de la stratégie de communication et supervision de la croissance du projet.",
+      duration: "janv. 2020 - aujourd’hui · 5 ans 9 mois",
+      country: "Cameroun",
+      countryCode: "CM",
+      workArrangement: "Indépendant",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/phanuel-tsopze-8a33a52a4/",
+        facebook: "https://www.facebook.com/alibia2023/",
       },
     },
   ];
@@ -114,7 +149,7 @@ const JobExp = () => {
             <div
               key={index}
               ref={(el) => {
-                cardRefs.current[index] = el;
+                cardRefs.current[index] = el; // Assigner la référence pour chaque carte
               }}
               className={`bg-gray-900 rounded-lg shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl ${
                 isVisible[index]

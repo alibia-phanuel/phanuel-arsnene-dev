@@ -33,6 +33,7 @@ const Hero = () => {
                   "React",
                   "Next.js",
                   "express",
+                  "wix studio",
                   // "Intégration IA & automatisation",
                 ],
                 autoStart: true,

@@ -195,7 +195,7 @@ export default function Nav({ openNav, activeSection }: Props) {
 
               <CardFooter className="flex justify-start space-x-2 sm:space-x-4 mt-4">
                 <a
-                  href="https://www.facebook.com/alibia"
+                  href="https://www.facebook.com/alibia2023/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"
@@ -204,7 +204,7 @@ export default function Nav({ openNav, activeSection }: Props) {
                   <FaFacebook className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
                 <a
-                  href="https://www.youtube.com/channel/alibia"
+                  href="https://www.youtube.com/watch?v=ILGqRtSNR8g"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition-colors"

@@ -1,7 +1,8 @@
 "use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import "animate.css";
-import { FaReact, FaBrain } from "react-icons/fa";
+import { FaReact, FaBrain, FaFileAlt } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiReact,
@@ -9,7 +10,6 @@ import {
   SiJavascript,
   SiNodedotjs,
   SiExpress,
-  SiNestjs,
   SiJest,
   SiPostman,
   SiGoogleanalytics,
@@ -41,7 +41,7 @@ const Technologi = () => {
     },
     {
       name: "TypeScript",
-      icon: <SiTypescript className="w-12 h-12  text-blue-400" />,
+      icon: <SiTypescript className="w-12 h-12 text-blue-400" />,
       description:
         "JavaScript typé pour des applications robustes et évolutives.",
     },
@@ -57,10 +57,10 @@ const Technologi = () => {
       description: "Framework minimaliste pour des API rapides et flexibles.",
     },
     {
-      name: "NestJS",
-      icon: <SiNestjs className="w-12 h-12 text-red-400" />,
+      name: "Swagger UI",
+      icon: <FaFileAlt className="w-12 h-12 text-green-500" />,
       description:
-        "Framework structuré pour des applications backend évolutives.",
+        "Documentation interactive et test des API REST pour une meilleure collaboration.",
     },
     {
       name: "Jest",
@@ -88,7 +88,6 @@ const Technologi = () => {
   ];
 
   const [isVisible, setIsVisible] = useState(false);
-
   const gridRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
