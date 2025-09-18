@@ -22,51 +22,79 @@ const Projets = () => {
       id: 1,
       title: "E-commerce Platform",
       description:
-        "Une plateforme e-commerce full-stack avec panier dynamique et intégration de paiements sécurisés. Développée pour optimiser les ventes en ligne.",
-      imageUrl:
-        "https://www.capconnect.com/blog/wp-content/uploads/2021/11/site-ecommerce.jpg",
-      tags: ["React", "Next.js", "Node.js"],
-      gitUrl: "https://github.com/user/ecommerce-platform",
-      demoUrl: "https://demo.ecommerce-platform.com",
+        "Développement d’un site e-commerce moderne pour produits électroniques, alliant performance (Next.js 15, shadcn/ui), backend dynamique (API Wix Studios) et outils marketing (Google Analytics, Pixel Facebook, GPT). Fonctionnalités : navigation intuitive, commandes fluides, suivi analytique, et intégration WhatsApp pour simplifier les ventes.",
+      imageUrl: "ProjectWeb/images/1.png",
+      tags: [
+        "Next.js",
+        "wix studio",
+        "shadcn/ui",
+        "Tailwind CSS",
+        "Google Analytics",
+        "Pixel Facebook",
+        "GPT",
+      ],
+      gitUrl: "https://github.com/alibia-phanuel/alibia-officiel-2024",
+      demoUrl: "https://alibia.tech/",
       category: "web",
     },
     {
       id: 2,
-      title: "Mobile Fitness App",
+      title: "La passerelle",
       description:
-        "Application mobile pour le suivi des entraînements et des progrès fitness, avec synchronisation cloud et notifications push.",
-      imageUrl:
-        "https://via.placeholder.com/400x250/10B981/FFFFFF?text=Fitness+App",
-      tags: ["React Native", "TypeScript"],
-      gitUrl: "https://github.com/user/fitness-app",
-      demoUrl: "https://demo.fitness-app.com",
-      category: "mobile",
+        "Site vitrine professionnel pour l’entreprise La Passerelle, développé avec Next.js, offrant une version mobile ios et android a téléchargeable.",
+      imageUrl: "ProjectWeb/images/2.png",
+      tags: ["Next.js 15", "Tailwind CSS", "Shadcn/ui", "TypeScript"],
+      gitUrl: "https://github.com/alibia-phanuel/passerelle-site",
+      demoUrl: "https://www.la-passerelle.co/",
+      category: "web",
     },
     {
       id: 3,
-      title: "AI Chatbot Assistant",
+      title: "Plateforme de Pitch de Startups",
       description:
-        "Chatbot intelligent intégré avec IA pour assistance client, utilisant des modèles NLP pour des réponses contextuelles.",
-      imageUrl:
-        "https://via.placeholder.com/400x250/A855F7/FFFFFF?text=AI+Chatbot",
-      tags: ["NestJS", "Intégration IA"],
-      gitUrl: "https://github.com/user/ai-chatbot",
-      demoUrl: "https://demo.ai-chatbot.com",
+        "j'ai développé une plateforme de pitching pour startups, intégrant une recherche pour les visiteurs et un back-end basé sur Sanity.io pour une gestion de contenu flexible. J'ai utilisé shadcn/ui pour une interface moderne et NextAuth (GitHub) pour une authentification fluide et sécurisée, mettant en œuvre des concepts avancés de Next.js et une solution de gestion de contenu moderne.",
+      imageUrl: "ProjectWeb/images/3.png",
+      tags: ["NestJS", "Sanity.io", "shadcn/ui"],
+      gitUrl: "https://github.com/alibia-phanuel/nextjs15ProjectWeb/tree/main",
+      demoUrl: "https://nextjs15-project-web.vercel.app/",
       category: "web",
     },
     {
       id: 4,
-      title: "Hybrid Web-Mobile Dashboard",
+      title: "Clonage du site de présentation de l'iPhone 15 Pro",
       description:
-        "Tableau de bord hybride pour gestion de projets, accessible web et mobile avec sync en temps réel et IA pour prédictions.",
-      imageUrl:
-        "https://via.placeholder.com/400x250/EF4444/FFFFFF?text=Dashboard",
-      tags: ["React", "React Native", "Next.js", "Intégration IA"],
-      gitUrl: "https://github.com/user/hybrid-dashboard",
-      demoUrl: "https://demo.hybrid-dashboard.com",
-      category: "web-mobile",
+        "J'ai cloné le site officiel de l'iPhone 15 Pro en utilisant React, Three.js et GSAP, mettant en valeur mes compétences en développement interactif et en animations 3D. Ce projet montre ma maîtrise des interfaces complexes avec des éléments 3D immersifs et des animations fluides.",
+      imageUrl: "ProjectWeb/images/4.png",
+      tags: ["React", "Three.js", "GSAP"],
+      gitUrl: "https://github.com/alibia-phanuel/IphoneClone3d",
+      demoUrl: "https://iphone-clone3d.vercel.app/",
+      category: "web",
     },
     // Ajoutez plus de projets ici si nécessaire
+    {
+      id: 5,
+      title: "site web moderne",
+      description:
+        "J'ai développé un site web moderne avec React JS et Tailwind CSS, mettant en valeur une interface utilisateur dynamique, un design responsive et une performance optimisée. Ce projet illustre ma capacité à créer des interfaces interactives tout en assurant une expérience utilisateur fluide. J'ai également utilisé Tailwind CSS ,SASS ",
+      imageUrl: "ProjectWeb/images/5.png",
+      tags: ["React", "Three.js", "GSAP"],
+      gitUrl: "https://github.com/alibia-phanuel/IphoneClone3d",
+      demoUrl: "https://iphone-clone3d.vercel.app/",
+      category: "web",
+    },
+
+    {
+      id: 6,
+      title: "Application pokemon via API",
+      description:
+        " j'ai développé une application Pokédex connectée à l'API PokéAPI. Elle affiche une liste de Pokémon avec recherche par nom ou numéro. Ce projet a renforcé mes compétences en gestion d'états, consommation d'API REST et optimisation des performances.",
+      imageUrl: "ProjectWeb/images/6.jpg",
+      tags: ["React native", "expo", "typescript"],
+      gitUrl: "https://github.com/alibia-phanuel/PokeMonApp",
+      demoUrl:
+        "https://expo.dev/preview/update?message=remove&updateRuntimeVersion=1.0.0&createdAt=2024-12-01T18%3A19%3A52.235Z&slug=exp&projectId=5ee48caa-12c4-45ed-8772-f1f8c1e0c9b2&group=55a3db02-b47a-4b1f-968c-cbafe70286cc",
+      category: "mobile",
+    },
   ];
 
   const [filter, setFilter] = useState("tous");

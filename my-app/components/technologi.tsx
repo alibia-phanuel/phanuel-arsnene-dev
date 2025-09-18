@@ -7,7 +7,7 @@ import {
   SiNextdotjs,
   SiReact,
   SiTypescript,
-  SiJavascript,
+  SiNestjs,
   SiNodedotjs,
   SiExpress,
   SiJest,
@@ -18,72 +18,88 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 const Technologi = () => {
   const technologies = [
+    // Frontend
     {
       name: "React",
       icon: <FaReact className="w-12 h-12 text-blue-400" />,
       description: "Création d'interfaces utilisateur dynamiques et réactives.",
+      category: "Frontend",
     },
     {
       name: "Next.js",
       icon: <SiNextdotjs className="w-12 h-12 text-white" />,
       description: "Développement de sites web performants avec SSR et SSG.",
+      category: "Frontend",
     },
     {
       name: "React Native",
       icon: <SiReact className="w-12 h-12 text-blue-400" />,
       description: "Applications mobiles multiplateformes fluides.",
-    },
-    {
-      name: "JavaScript",
-      icon: <SiJavascript className="w-12 h-12 text-yellow-400" />,
-      description:
-        "Langage de programmation pour des applications web interactives.",
+      category: "Frontend",
     },
     {
       name: "TypeScript",
       icon: <SiTypescript className="w-12 h-12 text-blue-400" />,
       description:
         "JavaScript typé pour des applications robustes et évolutives.",
+      category: "Frontend",
     },
+    // Backend
     {
       name: "Node.js",
       icon: <SiNodedotjs className="w-12 h-12 text-green-400" />,
       description:
         "Exécution JavaScript côté serveur pour des applications performantes.",
+      category: "Backend",
+    },
+    {
+      name: "NestJS",
+      icon: <SiNestjs className="w-12 h-12 text-red-500" />,
+      description:
+        "Framework Node.js structuré pour des applications backend évolutives et maintenables.",
+      category: "Backend",
     },
     {
       name: "Express",
       icon: <SiExpress className="w-12 h-12 text-gray-400" />,
       description: "Framework minimaliste pour des API rapides et flexibles.",
+      category: "Backend",
     },
+    // Outils
     {
       name: "Swagger UI",
       icon: <FaFileAlt className="w-12 h-12 text-green-500" />,
       description:
         "Documentation interactive et test des API REST pour une meilleure collaboration.",
+      category: "Outils",
     },
     {
       name: "Jest",
       icon: <SiJest className="w-12 h-12 text-pink-500" />,
       description:
         "Tests unitaires et d'intégration pour garantir la fiabilité du code.",
+      category: "Outils",
     },
     {
       name: "Postman",
       icon: <SiPostman className="w-12 h-12 text-orange-500" />,
       description: "Validation et test des API REST pour un backend robuste.",
-    },
-    {
-      name: "Intégration IA",
-      icon: <FaBrain className="w-12 h-12 text-purple-400" />,
-      description:
-        "Conception de fonctionnalités intelligentes avec GPT, Grok et autres outils IA.",
+      category: "Outils",
     },
     {
       name: "Google Analytics",
       icon: <SiGoogleanalytics className="w-12 h-12 text-yellow-400" />,
       description:
         "Suivi et analyse des interactions utilisateurs pour optimiser les applications web et mobiles.",
+      category: "Outils",
+    },
+    // IA
+    {
+      name: "Intégration IA",
+      icon: <FaBrain className="w-12 h-12 text-purple-400" />,
+      description:
+        "Conception de fonctionnalités intelligentes avec GPT, Grok et autres outils IA.",
+      category: "IA",
     },
   ];
 

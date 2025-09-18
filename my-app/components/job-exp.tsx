@@ -59,7 +59,7 @@ const JobExp = () => {
       title: "Développement full-stack mobile",
       company: "FORTIBTECH",
       description:
-        "En tant qu’employé, je fais la Conception d'interfaces utilisateur dynamiques avec React Native expo et Express API.",
+        "En tant qu’employé, je fais la Conception d'interfaces utilisateur dynamiques avec React Native expo et NestJS API.",
       duration: "De avr. 2025 à aujourd’hui · 6 mois",
       country: "France",
       countryCode: "FR",
