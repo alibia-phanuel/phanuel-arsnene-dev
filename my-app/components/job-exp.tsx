@@ -59,7 +59,7 @@ const JobExp = () => {
       title: "Développement full-stack mobile",
       company: "FORTIBTECH",
       description:
-        "En tant qu’employé, je fais la Conception d'interfaces utilisateur dynamiques avec React Native expo et NestJS API.",
+        "En tant qu’employé, je conçois des interfaces utilisateur dynamiques avec React Native et Expo, et je développe des API robustes et performantes avec NestJS pour supporter les fonctionnalités backend.",
       duration: "De avr. 2025 à aujourd’hui · 6 mois",
       country: "France",
       countryCode: "FR",
@@ -72,7 +72,7 @@ const JobExp = () => {
     },
     {
       title: "Développeur Web Freelance",
-      company: "Client privé (Canada)",
+      company: "Client privé (projet personnel)",
       description:
         "Développement d'une application de planification et de gestion de budget (front-end Next.js, back-end Express.js). Projet réalisé à distance sur 3 mois. Témoignage disponible dans la section Témoignages.",
       duration: "Mai. 2025 - Juil. 2025 · 3 mois",

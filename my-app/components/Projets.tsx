@@ -50,11 +50,11 @@ const Projets = () => {
     },
     {
       id: 3,
-      title: "Plateforme de Pitch de Startups",
+      title: "Reproduction de l’interface YouTube",
       description:
-        "j'ai développé une plateforme de pitching pour startups, intégrant une recherche pour les visiteurs et un back-end basé sur Sanity.io pour une gestion de contenu flexible. J'ai utilisé shadcn/ui pour une interface moderne et NextAuth (GitHub) pour une authentification fluide et sécurisée, mettant en œuvre des concepts avancés de Next.js et une solution de gestion de contenu moderne.",
+        "Cloné YouTube avec React.js en intégrant RapidAPI via Axios. Ce projet met en avant mes compétences en intégration d’API, gestion et affichage dynamique des données. J’y ai implémenté des fonctionnalités clés comme la recherche et la lecture de vidéos, tout en assurant une interface moderne, réactive et performante.",
       imageUrl: "ProjectWeb/images/3.png",
-      tags: ["NestJS", "Sanity.io", "shadcn/ui"],
+      tags: ["React", "Material UI", "RapidAPI", "Axios"],
       gitUrl: "https://github.com/alibia-phanuel/nextjs15ProjectWeb/tree/main",
       demoUrl: "https://nextjs15-project-web.vercel.app/",
       category: "web",

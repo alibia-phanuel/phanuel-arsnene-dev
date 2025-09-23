@@ -9,7 +9,8 @@ export default function ContactSection() {
       <div className="max-w-2xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">Contact</h2>
         <p className="mb-8 text-gray-300">
-          Vous pouvez me contacter par email ou WhatsApp pour toute demande.
+          Vous pouvez me contacter par email ou WhatsApp pour toute demande. Je
+          m&apos;engage à répondre dans un délai maximum de 48 heures.
         </p>
         <div className="flex justify-center gap-4 flex-wrap">
           {/* Email */}
@@ -21,8 +22,9 @@ export default function ContactSection() {
           </a>
 
           {/* WhatsApp */}
+
           <a
-            href="https://wa.me/237696603305"
+            href="https://wa.me/237696603305?text=Bonjour%2C%20je%20vous%20contacte%20pour%20discuter%20d%27une%20opportunit%C3%A9%20ou%20d%27une%20question.%20Pouvez-vous%20me%20recontacter%20%3F"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition"
