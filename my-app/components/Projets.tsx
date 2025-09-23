@@ -62,7 +62,13 @@ const Projets = () => {
       description:
         "Site vitrine professionnel pour l’entreprise La Passerelle, développé avec Next.js, offrant une version mobile ios et android a téléchargeable.",
       imageUrl: "ProjectWeb/images/2.png",
-      tags: ["Next.js 15", "Tailwind CSS", "Shadcn/ui", "TypeScript"],
+      tags: [
+        "Next.js 15",
+        "Tailwind CSS",
+        "Shadcn/ui",
+        "TypeScript",
+        "Google Analytics",
+      ],
       gitUrl: "https://github.com/alibia-phanuel/passerelle-site",
       demoUrl: "https://www.la-passerelle.co/",
       category: "web",
