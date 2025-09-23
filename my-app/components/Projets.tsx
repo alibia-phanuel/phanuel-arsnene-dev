@@ -19,6 +19,25 @@ interface Project {
 const Projets = () => {
   const projects: Project[] = [
     {
+      id: 0,
+      title: "Plateforme Web & Mobile d’Automatisation Facebook → WhatsApp",
+      description:
+        "Développement d’une solution SaaS permettant d’automatiser la gestion des prospects générés par Pages et Publicités Facebook, avec une intégration directe sur WhatsApp..",
+      imageUrl: "ProjectWeb/images/7.png",
+      tags: [
+        "Next.js 15",
+        "shadcn/ui",
+        "React Native (Expo)",
+        "Node.js · Express",
+        "MySQL · Sequelize",
+        "Facebook Graph API",
+        "WPPConnect",
+      ],
+      gitUrl: "https://github.com/alibia-phanuel/whatsapp-automation",
+      demoUrl: "https://github.com/alibia-phanuel/whatsapp-automation",
+      category: "web-mobile",
+    },
+    {
       id: 1,
       title: "E-commerce Platform",
       description:
@@ -145,7 +164,7 @@ const Projets = () => {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              className={`px-4 py-2 my-1 rounded-full text-sm font-medium transition-all duration-300 ${
                 filter === cat
                   ? "bg-blue-600 text-white shadow-lg"
                   : "bg-gray-800 text-gray-300 hover:bg-gray-700"

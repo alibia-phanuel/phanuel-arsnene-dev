@@ -83,6 +83,20 @@ const JobExp = () => {
         facebook: "https://www.facebook.com/karine.chahbi",
       },
     },
+
+    {
+      title: "Développeur Fullstack Freelance",
+      company: "Tout a un Prix",
+      description:
+        "Développement d’une application Web (Next.js) et Mobile (React Native) pour automatiser la gestion des prospects Facebook avec réponses automatiques sur WhatsApp. Backend Express.js avec MySQL (Sequelize). Projet réalisé à distance sur 2 mois.",
+      duration: "Juil. 2025 - Sep. 2025 · 2 mois",
+      country: "Cameroun",
+      countryCode: "CM",
+      workArrangement: "À distance · Freelance",
+      socialLinks: {
+        facebook: "https://www.facebook.com/profile.php?id=100064194244599",
+      },
+    },
     {
       title: "Front-End Developer",
       company: "La Passerrel",
@@ -101,7 +115,7 @@ const JobExp = () => {
       company: "IS Dev Experts S.A.S",
       description:
         "En tant qu’employé, j’ai participé au développement d’applications web et mobiles front-end, en concevant et implémentant des interfaces interactives et en intégrant les données via des API fiables.",
-      duration: "janv. 2024 - juil. 2025 · 1 an 7 mois",
+      duration: "janv. 2024 - mars. 2025 · 1 an 3 mois",
       country: "Cameroun",
       countryCode: "CM",
       workArrangement: "Hybride · Temps plein",

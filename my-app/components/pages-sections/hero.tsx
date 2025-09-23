@@ -56,7 +56,7 @@ const Hero = () => {
             <FaFacebook />
           </a>
           <a
-            href="https://github.com/alibia-phanuel"
+            href="https://github.com/alibia-phanuel?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
