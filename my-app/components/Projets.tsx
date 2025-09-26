@@ -51,6 +51,7 @@ const Projets = () => {
         "Google Analytics",
         "Pixel Facebook",
         "GPT",
+        "Facebook Ads"
       ],
       gitUrl: "https://github.com/alibia-phanuel/alibia-officiel-2024",
       demoUrl: "https://alibia.tech/",

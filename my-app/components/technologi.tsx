@@ -7,7 +7,7 @@ import {
   SiNextdotjs,
   SiReact,
   SiTypescript,
-  SiNestjs,
+  SiMeta,
   SiNodedotjs,
   SiExpress,
   SiJest,
@@ -28,7 +28,8 @@ const Technologi = () => {
     {
       name: "Next.js",
       icon: <SiNextdotjs className="w-12 h-12 text-white" />,
-      description: "Développement de sites web performants avec SSR et SSG.",
+      description:
+        "Développement de sites web performants avec SSR et SSG, ainsi que la création d’API intégrées pour une gestion complète du backend.",
       category: "Frontend",
     },
     {
@@ -53,11 +54,11 @@ const Technologi = () => {
       category: "Backend",
     },
     {
-      name: "NestJS",
-      icon: <SiNestjs className="w-12 h-12 text-red-500" />,
+      name: "Facebook Ads",
+      icon: <SiMeta className="w-12 h-12 text-blue-600" />,
       description:
-        "Framework Node.js structuré pour des applications backend évolutives et maintenables.",
-      category: "Backend",
+        "Mise en place et gestion de campagnes publicitaires pour rediriger efficacement vers des sites web et applications mobiles.",
+      category: "Marketing",
     },
     {
       name: "Express",
@@ -98,7 +99,7 @@ const Technologi = () => {
       name: "Intégration IA",
       icon: <FaBrain className="w-12 h-12 text-purple-400" />,
       description:
-        "Conception de fonctionnalités intelligentes avec GPT, Grok et autres outils IA.",
+        "Création de fonctionnalités intelligentes et interactives avec GPT, LangChain, Grok et autres outils IA pour apps web et mobiles.",
       category: "IA",
     },
   ];
