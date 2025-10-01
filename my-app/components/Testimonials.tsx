@@ -15,47 +15,48 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const testimonials = [
   {
-    name: "Jean Dupont",
+    name: "Karine Chahbi ",
     role: "Client",
     feedback:
       "Alibia a livré notre projet à temps avec une qualité exceptionnelle. Toujours à l'écoute et force de proposition.",
-    photo: "https://randomuser.me/api/portraits/men/32.jpg",
-    phone: "+237600000001",
-    whatsapp: "+237600000001",
-    facebook: "https://facebook.com/jeandupont",
-    countryCode: "fr", // 🇫🇷 France
+    photo: "/t1.jpg",
+    phone: "+18196907992",
+    whatsapp: "+18196907992",
+    facebook: "https://www.facebook.com/karine.chahbi",
+    countryCode: "ca", // 🇫🇷 canada
   },
   {
-    name: "Sarah Ndiaye",
-    role: "Collègue",
+    name: "Christ Cargo International ",
+    role: "Client",
     feedback:
-      "Travailler avec Alibia est un vrai plaisir. Son organisation et sa capacité à résoudre les problèmes sont remarquables.",
-    photo: "https://randomuser.me/api/portraits/women/65.jpg",
-    phone: "+237600000002",
-    whatsapp: "+237600000002",
-    facebook: "https://facebook.com/sarahndiaye",
-    countryCode: "sn", // 🇸🇳 Sénégal
+      "Alibia a créé pour nous une appli de tracking de colis claire, efficace et fiable. Toujours réactif et professionnel.",
+    photo: "/t2.jpg",
+    phone: "+237698391185",
+    whatsapp: "+237698391185",
+    facebook: "https://www.facebook.com/profile.php?id=100078607974251",
+    countryCode: "cm", // 🇸🇳 Sénégal
   },
   {
-    name: "Mohamed Traoré",
+    name: "Daboufatou Ayatolla",
     role: "Client",
     feedback:
       "Toujours professionnel, réactif et passionné. Je recommande vivement Alibia pour tout projet tech.",
-    photo: "https://randomuser.me/api/portraits/men/74.jpg",
-    phone: "+237600000003",
-    whatsapp: "+237600000003",
-    facebook: "https://facebook.com/mohamedtraore",
-    countryCode: "ml", // 🇲🇱 Mali
+    photo: "/t3.jpg",
+    phone: "+237 650701567",
+    whatsapp: "+237 50701567",
+    facebook: "https://www.facebook.com/profile.php?id=100064194244599",
+    countryCode: "cm", // 🇲🇱 Mali
   },
   {
-    name: "Laura Bemba",
+    name: "la passerelle",
     role: "Cheffe de projet",
     feedback:
       "Son sens du travail en équipe est exceptionnel. Il sait motiver et guider tout le monde.",
-    photo: "https://randomuser.me/api/portraits/women/44.jpg",
-    phone: "+237600000004",
-    whatsapp: "+237600000004",
-    facebook: "https://facebook.com/laurabemba",
+    photo: "/t4.jpg",
+    phone: "+237691813478",
+    whatsapp: "+237691813478",
+    facebook:
+      "https://www.facebook.com/people/La-Passerelle-corp/61566527031895",
     countryCode: "cm", // 🇨🇲 Cameroun
   },
 ];
