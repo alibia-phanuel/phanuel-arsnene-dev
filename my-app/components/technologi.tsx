@@ -13,6 +13,7 @@ import {
   SiJest,
   SiPostman,
   SiGoogleanalytics,
+  SiDocker,
 } from "react-icons/si";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
@@ -53,18 +54,26 @@ const Technologi = () => {
         "Exécution JavaScript côté serveur pour des applications performantes.",
       category: "Backend",
     },
-    {
-      name: "Facebook Ads",
-      icon: <SiMeta className="w-12 h-12 text-blue-600" />,
-      description:
-        "Mise en place et gestion de campagnes publicitaires pour rediriger efficacement vers des sites web et applications mobiles.",
-      category: "Marketing",
-    },
+
     {
       name: "Express",
       icon: <SiExpress className="w-12 h-12 text-gray-400" />,
       description: "Framework minimaliste pour des API rapides et flexibles.",
       category: "Backend",
+    },
+    {
+      name: "Intégration IA",
+      icon: <FaBrain className="w-12 h-12 text-purple-400" />,
+      description:
+        "Création de fonctionnalités intelligentes et interactives avec GPT, LangChain, Grok et autres outils IA pour apps web et mobiles.",
+      category: "IA",
+    },
+    {
+      name: "Jest",
+      icon: <SiJest className="w-12 h-12 text-pink-500" />,
+      description:
+        "Tests unitaires et d'intégration pour garantir la fiabilité du code.",
+      category: "Outils",
     },
     // Outils
     {
@@ -74,17 +83,12 @@ const Technologi = () => {
         "Documentation interactive et test des API REST pour une meilleure collaboration.",
       category: "Outils",
     },
+
     {
-      name: "Jest",
-      icon: <SiJest className="w-12 h-12 text-pink-500" />,
+      name: "Docker",
+      icon: <SiDocker className="w-12 h-12 text-blue-500" />,
       description:
-        "Tests unitaires et d'intégration pour garantir la fiabilité du code.",
-      category: "Outils",
-    },
-    {
-      name: "Postman",
-      icon: <SiPostman className="w-12 h-12 text-orange-500" />,
-      description: "Validation et test des API REST pour un backend robuste.",
+        "Conteneurisation et déploiement d’applications pour un environnement stable et portable.",
       category: "Outils",
     },
     {
@@ -94,14 +98,14 @@ const Technologi = () => {
         "Suivi et analyse des interactions utilisateurs pour optimiser les applications web et mobiles.",
       category: "Outils",
     },
-    // IA
     {
-      name: "Intégration IA",
-      icon: <FaBrain className="w-12 h-12 text-purple-400" />,
+      name: "Facebook Ads",
+      icon: <SiMeta className="w-12 h-12 text-blue-600" />,
       description:
-        "Création de fonctionnalités intelligentes et interactives avec GPT, LangChain, Grok et autres outils IA pour apps web et mobiles.",
-      category: "IA",
+        "Mise en place et gestion de campagnes publicitaires pour rediriger efficacement vers des sites web et applications mobiles.",
+      category: "Marketing",
     },
+    // IA
   ];
 
   const [isVisible, setIsVisible] = useState(false);

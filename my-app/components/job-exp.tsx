@@ -71,6 +71,19 @@ const JobExp = () => {
       },
     },
     {
+      title: "Développeur Web & Mobile Freelance",
+      company: "Chris Gargo Internationale",
+      description:
+        "Développement d’une première version d’un SaaS pour la gestion de l’import/export de colis entre la Chine et l’Afrique. La solution a été développée pour l’entreprise et est en cours d’amélioration pour intégrer un système d’abonnement destiné à d’autres clients (multi-plateforme : web et mobile).",
+      duration: "Août. 2025 - novembre. 2025 · 4 mois",
+      country: "Chine",
+      countryCode: "CN",
+      workArrangement: "À distance · Freelance",
+      socialLinks: {
+        facebook: "https://www.facebook.com/profile.php?id=100078607974251",
+      },
+    },
+    {
       title: "Développeur Web Freelance",
       company: "Client privé (projet personnel)",
       description:
