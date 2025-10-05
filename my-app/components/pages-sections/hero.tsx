@@ -1,5 +1,5 @@
 "use client";
-import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
@@ -34,7 +34,7 @@ const Hero = () => {
                   "Next.js",
                   "express",
                   "wix studio",
-                  // "Intégration IA & automatisation",
+                  "Intégration IA & automatisation",
                 ],
                 autoStart: true,
                 loop: true,
@@ -72,6 +72,15 @@ const Hero = () => {
             className="hover:text-cyan-400 transition"
           >
             <FaLinkedin />
+          </a>
+          <a
+            href="https://www.youtube.com/watch?v=ILGqRtSNR8g"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="YouTube"
+            className="hover:text-cyan-400 transition"
+          >
+            <FaYoutube />
           </a>
         </div>
       </div>

@@ -60,7 +60,7 @@ const JobExp = () => {
       company: "FORTIBTECH",
       description:
         "En tant qu’employé, je conçois des interfaces utilisateur dynamiques avec React Native et Expo, et je développe des API robustes et performantes avec Express.js (API) pour supporter les fonctionnalités backend.",
-      duration: "De avr. 2025 à aujourd’hui · 6 mois",
+      duration: "De avr. 2025 à aujourd’hui ·",
       country: "France",
       countryCode: "FR",
       workArrangement: "· À distance",
