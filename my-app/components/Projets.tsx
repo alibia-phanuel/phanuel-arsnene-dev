@@ -20,10 +20,29 @@ const Projets = () => {
   const projects: Project[] = [
     {
       id: 0,
+      title:
+        "Christ Cargo International  → Application de Suivi et Gestion de Colis Internationale 🌍 ",
+      description:
+        "Une solution complète développée pour Chrisht Cargo, entreprise spécialisée dans le transport de marchandises entre la Chine et l’Afrique.L’application permet un suivi précis des colis, une gestion fluide des envois et une communication transparente avec les clients, le tout à travers une interface moderne et performante.   ",
+      imageUrl: "ProjectWeb/images/colis.png",
+      tags: [
+        "Next.js (frontend)",
+        "Express.js (backend REST API)",
+        "React Native (Expo)",
+        "Prisma · PostgreSQL · JWT Auth",
+        "shadcn/ui",
+      ],
+      gitUrl: "",
+      demoUrl: "",
+      category: "web-mobile",
+    },
+
+    {
+      id: 1,
       title: "Plateforme Web & Mobile d’Automatisation Facebook → WhatsApp",
       description:
         "Développement d’une solution SaaS permettant d’automatiser la gestion des prospects générés par Pages et Publicités Facebook, avec une intégration directe sur WhatsApp..",
-      imageUrl: "ProjectWeb/images/7.png",
+      imageUrl: "ProjectWeb/images/7.jpg",
       tags: [
         "Next.js 15",
         "shadcn/ui",
@@ -38,8 +57,41 @@ const Projets = () => {
       category: "web-mobile",
     },
     {
-      id: 1,
-      title: "E-commerce Platform",
+      id: 3,
+      title:
+        "FortibTech  →  App Mobile  de Mise en Relation Entre Particuliers et Commerçants 💼",
+      description:
+        "Développement frontend de l’application mobile FortibOne, une plateforme qui relie particuliers et professionnels locaux.Contribution à la création des interfaces React Native / Expo, à l’intégration API NestJS via Axios, et à la mise en place d’une expérience utilisateur fluide et cohérente sur l’ensemble de l’app.",
+      imageUrl: "ProjectWeb/images/fortibone.png",
+      tags: [
+        "React Native · Expo",
+        "TypeScript · Axios",
+        "NestJS (backend) · JWT Auth",
+        "Code non public — projet réalisé ",
+      ],
+      gitUrl: "",
+      demoUrl: "",
+      category: "mobile",
+    },
+    {
+      id: 4,
+      title:
+        "FortibTech  → Hodos Application Mobile de Parcours Découverte et Fidélisation Locale 📍",
+      description:
+        "Développement frontend de l’app mobile Hodos, une application française de parcours découverte et fidélisation locale. Contribution à la conception UI/UX et à la création d’interfaces React Native modernes et interactives, intégrant Google Maps, défis gamifiés et récompenses commerçants.",
+      imageUrl: "ProjectWeb/images/hodos.png",
+      tags: [
+        "React Native · Expo",
+        "TypeScript · Axios",
+        "Code non public — projet réalisé ",
+      ],
+      gitUrl: "",
+      demoUrl: "",
+      category: "mobile",
+    },
+    {
+      id: 6,
+      title: "ALIBIA → E-commerce Platform",
       description:
         "Développement d’un site e-commerce moderne pour produits électroniques, alliant performance (Next.js 15, shadcn/ui), backend dynamique (API Wix Studios) et outils marketing (Google Analytics, Pixel Facebook, GPT). Fonctionnalités : navigation intuitive, commandes fluides, suivi analytique, et intégration WhatsApp pour simplifier les ventes.",
       imageUrl: "ProjectWeb/images/1.png",
@@ -51,15 +103,15 @@ const Projets = () => {
         "Google Analytics",
         "Pixel Facebook",
         "GPT",
-        "Facebook Ads"
+        "Facebook Ads",
       ],
       gitUrl: "https://github.com/alibia-phanuel/alibia-officiel-2024",
       demoUrl: "https://alibia.tech/",
       category: "web",
     },
     {
-      id: 2,
-      title: "La passerelle",
+      id: 7,
+      title: "La passerelle → linding page pour app mobile ios & android",
       description:
         "Site vitrine professionnel pour l’entreprise La Passerelle, développé avec Next.js, offrant une version mobile ios et android a téléchargeable.",
       imageUrl: "ProjectWeb/images/2.png",
@@ -75,7 +127,7 @@ const Projets = () => {
       category: "web",
     },
     {
-      id: 3,
+      id: 8,
       title: "Reproduction de l’interface YouTube",
       description:
         "Cloné YouTube avec React.js en intégrant RapidAPI via Axios. Ce projet met en avant mes compétences en intégration d’API, gestion et affichage dynamique des données. J’y ai implémenté des fonctionnalités clés comme la recherche et la lecture de vidéos, tout en assurant une interface moderne, réactive et performante.",
@@ -86,7 +138,7 @@ const Projets = () => {
       category: "web",
     },
     {
-      id: 4,
+      id: 9,
       title: "Clonage du site de présentation de l'iPhone 15 Pro",
       description:
         "J'ai cloné le site officiel de l'iPhone 15 Pro en utilisant React, Three.js et GSAP, mettant en valeur mes compétences en développement interactif et en animations 3D. Ce projet montre ma maîtrise des interfaces complexes avec des éléments 3D immersifs et des animations fluides.",
@@ -98,7 +150,7 @@ const Projets = () => {
     },
     // Ajoutez plus de projets ici si nécessaire
     {
-      id: 5,
+      id: 10,
       title: "site web moderne",
       description:
         "J'ai développé un site web moderne avec React JS et Tailwind CSS, mettant en valeur une interface utilisateur dynamique, un design responsive et une performance optimisée. Ce projet illustre ma capacité à créer des interfaces interactives tout en assurant une expérience utilisateur fluide. J'ai également utilisé Tailwind CSS ,SASS ",
@@ -110,7 +162,7 @@ const Projets = () => {
     },
 
     {
-      id: 6,
+      id: 11,
       title: "Application pokemon via API",
       description:
         " j'ai développé une application Pokédex connectée à l'API PokéAPI. Elle affiche une liste de Pokémon avec recherche par nom ou numéro. Ce projet a renforcé mes compétences en gestion d'états, consommation d'API REST et optimisation des performances.",

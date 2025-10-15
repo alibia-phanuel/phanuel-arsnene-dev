@@ -11,104 +11,133 @@ import {
   SiNodedotjs,
   SiExpress,
   SiJest,
-  SiPostman,
   SiGoogleanalytics,
   SiDocker,
+  SiPostgresql,
+  SiPrisma,
+  SiAdobepremierepro,
+  SiAdobeaudition,
 } from "react-icons/si";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 const Technologi = () => {
   const technologies = [
-    // Frontend
+    // Compétence principale
     {
       name: "React",
       icon: <FaReact className="w-12 h-12 text-blue-400" />,
       description: "Création d'interfaces utilisateur dynamiques et réactives.",
-      category: "Frontend",
+      category: "Compétence principale",
     },
     {
       name: "Next.js",
       icon: <SiNextdotjs className="w-12 h-12 text-white" />,
       description:
         "Développement de sites web performants avec SSR et SSG, ainsi que la création d’API intégrées pour une gestion complète du backend.",
-      category: "Frontend",
-    },
-    {
-      name: "React Native",
-      icon: <SiReact className="w-12 h-12 text-blue-400" />,
-      description: "Applications mobiles multiplateformes fluides.",
-      category: "Frontend",
+      category: "Compétence principale",
     },
     {
       name: "TypeScript",
       icon: <SiTypescript className="w-12 h-12 text-blue-400" />,
       description:
         "JavaScript typé pour des applications robustes et évolutives.",
-      category: "Frontend",
+      category: "Compétence principale",
     },
-    // Backend
+    // Compétence secondaire
+    {
+      name: "React Native",
+      icon: <SiReact className="w-12 h-12 text-blue-400" />,
+      description: "Applications mobiles multiplateformes fluides.",
+      category: "Compétence principale",
+    },
     {
       name: "Node.js",
       icon: <SiNodedotjs className="w-12 h-12 text-green-400" />,
       description:
         "Exécution JavaScript côté serveur pour des applications performantes.",
-      category: "Backend",
+      category: "Compétence principale",
     },
-
     {
       name: "Express",
       icon: <SiExpress className="w-12 h-12 text-gray-400" />,
       description: "Framework minimaliste pour des API rapides et flexibles.",
-      category: "Backend",
-    },
-    {
-      name: "Intégration IA",
-      icon: <FaBrain className="w-12 h-12 text-purple-400" />,
-      description:
-        "Création de fonctionnalités intelligentes et interactives avec GPT, LangChain, Grok et autres outils IA pour apps web et mobiles.",
-      category: "IA",
+      category: "Compétence principale",
     },
     {
       name: "Jest",
       icon: <SiJest className="w-12 h-12 text-pink-500" />,
       description:
         "Tests unitaires et d'intégration pour garantir la fiabilité du code.",
-      category: "Outils",
+      category: "Compétence secondaire",
     },
-    // Outils
+    {
+      name: "PostgreSQL",
+      icon: <SiPostgresql className="w-12 h-12 text-blue-600" />,
+      description:
+        "Gestion de bases de données relationnelles robustes et performantes.",
+      category: "Compétence secondaire",
+    },
+    {
+      name: "Prisma",
+      icon: <SiPrisma className="w-12 h-12 text-gray-200" />,
+      description:
+        "ORM moderne pour une interaction simplifiée avec les bases de données.",
+      category: "Compétence secondaire",
+    },
+    // Soft Skills LangChain
+    {
+      name: "Intégration IA",
+      icon: <FaBrain className="w-12 h-12 text-purple-400" />,
+      description:
+        "Création de fonctionnalités intelligentes et interactives avec GPT, Grok et autres outils IA pour apps web et mobiles.",
+      category: "Compétence secondaire",
+    },
     {
       name: "Swagger UI",
       icon: <FaFileAlt className="w-12 h-12 text-green-500" />,
       description:
         "Documentation interactive et test des API REST pour une meilleure collaboration.",
-      category: "Outils",
+      category: "Soft Skills",
     },
-
     {
       name: "Docker",
       icon: <SiDocker className="w-12 h-12 text-blue-500" />,
       description:
         "Conteneurisation et déploiement d’applications pour un environnement stable et portable.",
-      category: "Outils",
+      category: "Soft Skills",
     },
     {
       name: "Google Analytics",
       icon: <SiGoogleanalytics className="w-12 h-12 text-yellow-400" />,
       description:
         "Suivi et analyse des interactions utilisateurs pour optimiser les applications web et mobiles.",
-      category: "Outils",
+      category: "Soft Skills",
     },
     {
       name: "Facebook Ads",
       icon: <SiMeta className="w-12 h-12 text-blue-600" />,
       description:
         "Mise en place et gestion de campagnes publicitaires pour rediriger efficacement vers des sites web et applications mobiles.",
-      category: "Marketing",
+      category: "Soft Skills",
     },
-    // IA
+    // {
+    //   name: "Adobe Premiere Pro",
+    //   icon: <SiAdobepremierepro className="w-12 h-12 text-purple-600" />,
+    //   description:
+    //     "Montage vidéo professionnel pour créer des contenus visuels percutants.",
+    //   category: "Soft Skills",
+    // },
+    // {
+    //   name: "Adobe Audition",
+    //   icon: <SiAdobeaudition className="w-12 h-12 text-purple-600" />,
+    //   description:
+    //     "Édition et production audio pour des contenus sonores de haute qualité.",
+    //   category: "Soft Skills",
+    // },
   ];
 
   const [isVisible, setIsVisible] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const gridRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -170,17 +199,52 @@ const Technologi = () => {
     });
   };
 
+  const categories = [
+    "Compétence principale",
+    "Compétence secondaire",
+    "Soft Skills",
+  ];
+
+  const filteredTechnologies = selectedCategory
+    ? technologies.filter((tech) => tech.category === selectedCategory)
+    : technologies;
+
   return (
     <div className="py-12 bg-[#010104]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-white mb-8">
           Mes Technologies & outils de travail
         </h2>
+        <div className="flex justify-center mb-8 space-x-4">
+          <button
+            className={`px-4 py-2 rounded-full ${
+              selectedCategory === null
+                ? "bg-blue-600 text-white"
+                : "bg-gray-700 text-gray-300"
+            } hover:bg-blue-500 transition-colors`}
+            onClick={() => setSelectedCategory(null)}
+          >
+            Toutes
+          </button>
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={`px-4 py-2  rounded-full ${
+                selectedCategory === category
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-700 text-gray-300"
+              } hover:bg-blue-500 transition-colors`}
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
         <div
           ref={gridRef}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          {technologies.map((tech, index) => (
+          {filteredTechnologies.map((tech, index) => (
             <Card
               key={index}
               ref={(el) => {
@@ -206,6 +270,7 @@ const Technologi = () => {
                   {tech?.name}
                 </CardTitle>
                 <p className="text-gray-300 text-sm">{tech?.description}</p>
+                <p className="text-gray-500 text-xs mt-2">{tech?.category}</p>
               </CardContent>
             </Card>
           ))}
