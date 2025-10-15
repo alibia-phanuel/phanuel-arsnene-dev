@@ -19,7 +19,7 @@ const Hero = () => {
         <h1 className="text-2xl my-2 sm:text-4xl md:text-5xl lg:text-6xl text-center">
           – Développeur – <br />
           <span className="text-cyan-200  relative top-4">
-            JavaScript | TypeScript | Node.js | IA
+            JavaScript | TypeScript | Node.js
           </span>
         </h1>
         <h2 className="mt-5 text-sm px-2 text-center sm:text-2xl font-medium flex items-center justify-center flex-wrap">

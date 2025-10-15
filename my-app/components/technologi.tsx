@@ -85,13 +85,13 @@ const Technologi = () => {
       category: "Compétence secondaire",
     },
     // Soft Skills LangChain
-    {
-      name: "Intégration IA",
-      icon: <FaBrain className="w-12 h-12 text-purple-400" />,
-      description:
-        "Création de fonctionnalités intelligentes et interactives avec GPT, Grok et autres outils IA pour apps web et mobiles.",
-      category: "Compétence secondaire",
-    },
+    // {
+    //   name: "Intégration IA",
+    //   icon: <FaBrain className="w-12 h-12 text-purple-400" />,
+    //   description:
+    //     "Création de fonctionnalités intelligentes et interactives avec GPT, Grok et autres outils IA pour apps web et mobiles.",
+    //   category: "Compétence secondaire",
+    // },
     {
       name: "Swagger UI",
       icon: <FaFileAlt className="w-12 h-12 text-green-500" />,
