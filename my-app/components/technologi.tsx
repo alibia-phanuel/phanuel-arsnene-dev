@@ -85,13 +85,13 @@ const Technologi = () => {
       category: "Compétence secondaire",
     },
     // Soft Skills LangChain
-    // {
-    //   name: "Intégration IA",
-    //   icon: <FaBrain className="w-12 h-12 text-purple-400" />,
-    //   description:
-    //     "Création de fonctionnalités intelligentes et interactives avec GPT, Grok et autres outils IA pour apps web et mobiles.",
-    //   category: "Compétence secondaire",
-    // },
+    {
+      name: "Intégration IA",
+      icon: <FaBrain className="w-12 h-12 text-purple-400" />,
+      description:
+        "Création de fonctionnalités intelligentes et interactives avec GPT, Grok et autres outils IA pour apps web et mobiles.",
+      category: "Compétence principale",
+    },
     {
       name: "Swagger UI",
       icon: <FaFileAlt className="w-12 h-12 text-green-500" />,
@@ -120,20 +120,20 @@ const Technologi = () => {
         "Mise en place et gestion de campagnes publicitaires pour rediriger efficacement vers des sites web et applications mobiles.",
       category: "Soft Skills",
     },
-    // {
-    //   name: "Adobe Premiere Pro",
-    //   icon: <SiAdobepremierepro className="w-12 h-12 text-purple-600" />,
-    //   description:
-    //     "Montage vidéo professionnel pour créer des contenus visuels percutants.",
-    //   category: "Soft Skills",
-    // },
-    // {
-    //   name: "Adobe Audition",
-    //   icon: <SiAdobeaudition className="w-12 h-12 text-purple-600" />,
-    //   description:
-    //     "Édition et production audio pour des contenus sonores de haute qualité.",
-    //   category: "Soft Skills",
-    // },
+    {
+      name: "Adobe Premiere Pro",
+      icon: <SiAdobepremierepro className="w-12 h-12 text-purple-600" />,
+      description:
+        "Montage vidéo professionnel pour créer des contenus visuels percutants.",
+      category: "Soft Skills",
+    },
+    {
+      name: "Adobe Audition",
+      icon: <SiAdobeaudition className="w-12 h-12 text-purple-600" />,
+      description:
+        "Édition et production audio pour des contenus sonores de haute qualité.",
+      category: "Soft Skills",
+    },
   ];
 
   const [isVisible, setIsVisible] = useState(false);
