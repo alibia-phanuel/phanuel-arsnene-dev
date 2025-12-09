@@ -33,7 +33,7 @@ export default function ContactSection() {
         <div className="flex justify-center gap-4 flex-wrap">
           {/* Email */}
           <a
-            href="mailto:arsenetsopze2001@gmail.com"
+            href="mailto:phanuel.alibia@gmail.com"
             onClick={() => trackEvent("click_email", "Email Contact")}
             className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition"
           >
@@ -42,7 +42,7 @@ export default function ContactSection() {
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/237688669628?text=Bonjour%2C%20je%20vous%20contacte%20pour%20discuter%20d%27une%20opportunit%C3%A9%20ou%20d%27une%20question.%20Pouvez-vous%20me%20recontacter%20%3F"
+            href="https://wa.me/237658953907?text=Bonjour%2C%20je%20vous%20contacte%20pour%20discuter%20d%27une%20opportunit%C3%A9%20ou%20d%27une%20question.%20Pouvez-vous%20me%20recontacter%20%3F"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent("click_whatsapp", "WhatsApp Contact")}
