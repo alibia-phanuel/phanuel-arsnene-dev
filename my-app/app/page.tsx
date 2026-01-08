@@ -33,11 +33,9 @@ export default function Home() {
       },
       { threshold: 0.5 } // Déclenche quand 50% de la section est visible
     );
-
     Object.values(sectionRefs.current).forEach((ref) => {
       if (ref) observer.observe(ref);
     });
-
     return () => {
       Object.values(sectionRefs.current).forEach((ref) => {
         if (ref) observer.unobserve(ref);
