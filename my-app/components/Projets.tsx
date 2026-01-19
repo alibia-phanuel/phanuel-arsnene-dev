@@ -13,13 +13,36 @@ interface Project {
   tags: string[];
   gitUrl: string;
   demoUrl: string;
-  category: "web" | "mobile" | "web-mobile";
+  category: "web" | "mobile" | "web-mobile" | "ai";
 }
 
 const Projets = () => {
   const projects: Project[] = [
     {
       id: 0,
+      title:
+        "RAG Assistant → Chatbot Intelligent avec IA sur vos Documents PDF 🤖",
+      description:
+        "Application RAG moderne permettant d'interroger intelligemment vos documents PDF grâce à la génération augmentée par récupération (Retrieval-Augmented Generation). Technologies : Next.js, Google Gemini, embeddings vectoriels, Neon + pgvector, HNSW.",
+      imageUrl: "ProjectWeb/images/rag-assistant.png", // ← Remplace par ta vraie image !
+      tags: [
+        "Next.js 15",
+        "TypeScript",
+        "Tailwind",
+        "shadcn/ui",
+        "Google Gemini",
+        "text-embedding-004",
+        "Neon + pgvector",
+        "HNSW",
+        "Vercel AI SDK",
+        "RAG",
+      ],
+      gitUrl: "https://github.com/alibia-phanuel/boot-ia-cours", // ← Mets ton vrai repo
+      demoUrl: "https://boot-ia-cours.vercel.app/chat", // ← Mets le lien Vercel/Netlify si déployé
+      category: "ai",
+    },
+    {
+      id: 1,
       title:
         "Christ Cargo International  → Application de Suivi et Gestion de Colis Internationale 🌍 ",
       description:
@@ -38,7 +61,7 @@ const Projets = () => {
     },
 
     {
-      id: 1,
+      id: 2,
       title: "Plateforme Web & Mobile d’Automatisation Facebook → WhatsApp",
       description:
         "Développement d’une solution SaaS permettant d’automatiser la gestion des prospects générés par Pages et Publicités Facebook, avec une intégration directe sur WhatsApp..",
@@ -57,7 +80,7 @@ const Projets = () => {
       category: "web-mobile",
     },
     {
-      id: 3,
+      id: 4,
       title:
         "FortibTech  →  App Mobile  de Mise en Relation Entre Particuliers et Commerçants 💼",
       description:
@@ -74,7 +97,7 @@ const Projets = () => {
       category: "mobile",
     },
     {
-      id: 4,
+      id: 5,
       title:
         "FortibTech  → Hodos Application Mobile de Parcours Découverte et Fidélisation Locale 📍",
       description:
@@ -148,16 +171,15 @@ const Projets = () => {
       demoUrl: "https://iphone-clone3d.vercel.app/",
       category: "web",
     },
-    // Ajoutez plus de projets ici si nécessaire
     {
       id: 10,
       title: "site web moderne",
       description:
         "J'ai développé un site web moderne avec React JS et Tailwind CSS, mettant en valeur une interface utilisateur dynamique, un design responsive et une performance optimisée. Ce projet illustre ma capacité à créer des interfaces interactives tout en assurant une expérience utilisateur fluide. J'ai également utilisé Tailwind CSS ,SASS ",
       imageUrl: "ProjectWeb/images/5.png",
-      tags: ["React", "Three.js", "GSAP"],
-      gitUrl: "https://github.com/alibia-phanuel/IphoneClone3d",
-      demoUrl: "https://iphone-clone3d.vercel.app/",
+      tags: ["React", "Tailwind CSS", "SASS"],
+      gitUrl: "https://github.com/alibia-phanuel/IphoneClone3d", // ← À corriger si besoin
+      demoUrl: "https://iphone-clone3d.vercel.app/", // ← À corriger si besoin
       category: "web",
     },
 
@@ -173,6 +195,8 @@ const Projets = () => {
         "https://expo.dev/preview/update?message=remove&updateRuntimeVersion=1.0.0&createdAt=2024-12-01T18%3A19%3A52.235Z&slug=exp&projectId=5ee48caa-12c4-45ed-8772-f1f8c1e0c9b2&group=55a3db02-b47a-4b1f-968c-cbafe70286cc",
       category: "mobile",
     },
+
+    // ── NOUVEAU PROJET AI ──
   ];
 
   const [filter, setFilter] = useState("tous");
@@ -182,10 +206,7 @@ const Projets = () => {
 
   const filteredProjects = projects.filter((project) => {
     if (filter === "tous") return true;
-    if (filter === "web") return project.category === "web";
-    if (filter === "mobile") return project.category === "mobile";
-    if (filter === "web-mobile") return project.category === "web-mobile";
-    return true;
+    return project.category === filter;
   });
 
   useEffect(() => {
@@ -197,7 +218,7 @@ const Projets = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (gridRef.current) {
@@ -219,7 +240,7 @@ const Projets = () => {
         </h2>
         {/* Filtres */}
         <div className="flex justify-center mb-8 space-x-4 flex-wrap">
-          {["tous", "web", "mobile", "web-mobile"].map((cat) => (
+          {["tous", "web", "mobile", "web-mobile", "ai"].map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
@@ -232,10 +253,12 @@ const Projets = () => {
               {cat === "tous"
                 ? "Tous"
                 : cat === "web"
-                ? "Projet Web"
-                : cat === "mobile"
-                ? "Projet Mobile"
-                : "Web & Mobile "}
+                  ? "Projet Web"
+                  : cat === "mobile"
+                    ? "Projet Mobile"
+                    : cat === "web-mobile"
+                      ? "Web & Mobile"
+                      : "IA / AI"}
             </button>
           ))}
         </div>
@@ -290,24 +313,28 @@ const Projets = () => {
               <CardContent className="p-4 pt-0">
                 {/* Boutons */}
                 <div className="flex space-x-4">
-                  <a
-                    href={project.gitUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 text-center px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-700 transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    <FaGithub className="w-4 h-4" />
-                    <span>Code</span>
-                  </a>
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    <FaExternalLinkAlt className="w-4 h-4" />
-                    <span>Démo</span>
-                  </a>
+                  {project.gitUrl && (
+                    <a
+                      href={project.gitUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 text-center px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-700 transition-all duration-300 flex items-center justify-center space-x-2"
+                    >
+                      <FaGithub className="w-4 h-4" />
+                      <span>Code</span>
+                    </a>
+                  )}
+                  {project.demoUrl && (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition-all duration-300 flex items-center justify-center space-x-2"
+                    >
+                      <FaExternalLinkAlt className="w-4 h-4" />
+                      <span>Démo</span>
+                    </a>
+                  )}
                 </div>
               </CardContent>
             </Card>
