@@ -1,8 +1,4 @@
 "use client";
-
-// Make sure to install animate.css: `npm install animate.css`
-// Make sure to install react-icons: `npm install react-icons`
-// Make sure to install react-country-flag: `npm install react-country-flag`
 import React, { useEffect, useRef, useState } from "react";
 import "animate.css";
 import {

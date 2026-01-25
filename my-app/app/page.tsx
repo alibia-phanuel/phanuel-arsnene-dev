@@ -8,15 +8,17 @@ import Testimonials from "@/components/Testimonials";
 import ContactSection from "@/components/ContactSection";
 import ResponsiveNav from "@/components/nar-bar/ResponsiveNav";
 import Projets from "@/components/Projets";
+import AISidebar from "@/components/AISidebar";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("");
+  
   const sectionRefs = useRef<{
     [key: string]: HTMLElement | null;
   }>({
     accueil: null,
     competences: null,
-    projets: null, // Ajout
+    projets: null,
     softSkills: null,
     temoignages: null,
     contact: null,
@@ -31,12 +33,13 @@ export default function Home() {
           }
         });
       },
-      { threshold: 0.5 } // Déclenche quand 50% de la section est visible
+      { threshold: 0.5 }
     );
     Object.values(sectionRefs.current).forEach((ref) => {
       if (ref) observer.observe(ref);
     });
     return () => {
+    
       Object.values(sectionRefs.current).forEach((ref) => {
         if (ref) observer.unobserve(ref);
       });
@@ -46,6 +49,11 @@ export default function Home() {
   return (
     <>
       <ResponsiveNav activeSection={activeSection} />
+      
+      {/* Composant Sidebar AI */}
+      <AISidebar />
+
+      {/* Contenu principal */}
       <div className="overflow-hidden">
         <section
           id="accueil"
@@ -63,7 +71,6 @@ export default function Home() {
         >
           <Competences />
         </section>
-
         <section
           id="projets"
           ref={(el) => {
@@ -81,7 +88,6 @@ export default function Home() {
           <SoftSkills />
         </section>
         <section
-       
           id="temoignages"
           ref={(el) => {
             sectionRefs.current.temoignages = el;

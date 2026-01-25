@@ -32,9 +32,10 @@ const Hero = () => {
                 strings: [
                   "React",
                   "Next.js",
-                  "express",
-                  "wix studio",
-                  "Intégration IA & automatisation",
+                  "ExpressJS",
+                  "Wix Studio",
+                  "Intégration IA",
+                  //  & automatisation
                 ],
                 autoStart: true,
                 loop: true,
