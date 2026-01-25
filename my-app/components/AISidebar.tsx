@@ -43,10 +43,10 @@ export default function AISidebar() {
   };
 
   const suggestions = [
-    "Qui est Phanuel Arsene ?",
-    "Quel est ton parcours professionnel ?",
-    "Peux-tu me montrer ton CV ?",
-    "Quels sont tes projets et centres d'intérêt ?",
+    "Quelles sont les compétences techniques en IA de Phanuel  ?",
+    "Décris-moi les projets internationaux réalisés",
+    "Quelle est l'expérience de Phanuel avec les chatbots et RAG ?",
+    "Quels sont les objectifs et la vision d'Alibia Tech ?",
   ];
 
   return (
