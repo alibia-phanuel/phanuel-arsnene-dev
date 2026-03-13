@@ -113,27 +113,27 @@ const Technologi = () => {
         "Suivi et analyse des interactions utilisateurs pour optimiser les applications web et mobiles.",
       category: "Soft Skills",
     },
-    {
-      name: "Facebook Ads",
-      icon: <SiMeta className="w-12 h-12 text-blue-600" />,
-      description:
-        "Mise en place et gestion de campagnes publicitaires pour rediriger efficacement vers des sites web et applications mobiles.",
-      category: "Soft Skills",
-    },
-    {
-      name: "Adobe Premiere Pro",
-      icon: <SiAdobepremierepro className="w-12 h-12 text-purple-600" />,
-      description:
-        "Montage vidéo professionnel pour créer des contenus visuels percutants.",
-      category: "Soft Skills",
-    },
-    {
-      name: "Adobe Audition",
-      icon: <SiAdobeaudition className="w-12 h-12 text-purple-600" />,
-      description:
-        "Édition et production audio pour des contenus sonores de haute qualité.",
-      category: "Soft Skills",
-    },
+    // {
+    //   name: "Facebook Ads",
+    //   icon: <SiMeta className="w-12 h-12 text-blue-600" />,
+    //   description:
+    //     "Mise en place et gestion de campagnes publicitaires pour rediriger efficacement vers des sites web et applications mobiles.",
+    //   category: "Soft Skills",
+    // },
+    // {
+    //   name: "Adobe Premiere Pro",
+    //   icon: <SiAdobepremierepro className="w-12 h-12 text-purple-600" />,
+    //   description:
+    //     "Montage vidéo professionnel pour créer des contenus visuels percutants.",
+    //   category: "Soft Skills",
+    // },
+    // {
+    //   name: "Adobe Audition",
+    //   icon: <SiAdobeaudition className="w-12 h-12 text-purple-600" />,
+    //   description:
+    //     "Édition et production audio pour des contenus sonores de haute qualité.",
+    //   category: "Soft Skills",
+    // },
   ];
 
   const [isVisible, setIsVisible] = useState(false);

@@ -80,7 +80,7 @@ const Projets = () => {
       category: "web-mobile",
     },
     {
-      id: 4,
+      id: 3,
       title:
         "FortibTech  →  App Mobile  de Mise en Relation Entre Particuliers et Commerçants 💼",
       description:
@@ -97,7 +97,7 @@ const Projets = () => {
       category: "mobile",
     },
     {
-      id: 5,
+      id: 4,
       title:
         "FortibTech  → Hodos Application Mobile de Parcours Découverte et Fidélisation Locale 📍",
       description:
@@ -113,27 +113,7 @@ const Projets = () => {
       category: "mobile",
     },
     {
-      id: 6,
-      title: "ALIBIA → E-commerce Platform",
-      description:
-        "Développement d’un site e-commerce moderne pour produits électroniques, alliant performance (Next.js 15, shadcn/ui), backend dynamique (API Wix Studios) et outils marketing (Google Analytics, Pixel Facebook, GPT). Fonctionnalités : navigation intuitive, commandes fluides, suivi analytique, et intégration WhatsApp pour simplifier les ventes.",
-      imageUrl: "ProjectWeb/images/1.png",
-      tags: [
-        "Next.js",
-        "wix studio",
-        "shadcn/ui",
-        "Tailwind CSS",
-        "Google Analytics",
-        "Pixel Facebook",
-        "GPT",
-        "Facebook Ads",
-      ],
-      gitUrl: "https://github.com/alibia-phanuel/alibia-officiel-2024",
-      demoUrl: "https://alibia.tech/",
-      category: "web",
-    },
-    {
-      id: 7,
+      id: 5,
       title: "La passerelle → linding page pour app mobile ios & android",
       description:
         "Site vitrine professionnel pour l’entreprise La Passerelle, développé avec Next.js, offrant une version mobile ios et android a téléchargeable.",
@@ -149,42 +129,9 @@ const Projets = () => {
       demoUrl: "https://www.la-passerelle.co/",
       category: "web",
     },
-    {
-      id: 8,
-      title: "Reproduction de l’interface YouTube",
-      description:
-        "Cloné YouTube avec React.js en intégrant RapidAPI via Axios. Ce projet met en avant mes compétences en intégration d’API, gestion et affichage dynamique des données. J’y ai implémenté des fonctionnalités clés comme la recherche et la lecture de vidéos, tout en assurant une interface moderne, réactive et performante.",
-      imageUrl: "ProjectWeb/images/3.png",
-      tags: ["React", "Material UI", "RapidAPI", "Axios"],
-      gitUrl: "https://github.com/alibia-phanuel/nextjs15ProjectWeb/tree/main",
-      demoUrl: "https://nextjs15-project-web.vercel.app/",
-      category: "web",
-    },
-    {
-      id: 9,
-      title: "Clonage du site de présentation de l'iPhone 15 Pro",
-      description:
-        "J'ai cloné le site officiel de l'iPhone 15 Pro en utilisant React, Three.js et GSAP, mettant en valeur mes compétences en développement interactif et en animations 3D. Ce projet montre ma maîtrise des interfaces complexes avec des éléments 3D immersifs et des animations fluides.",
-      imageUrl: "ProjectWeb/images/4.png",
-      tags: ["React", "Three.js", "GSAP"],
-      gitUrl: "https://github.com/alibia-phanuel/IphoneClone3d",
-      demoUrl: "https://iphone-clone3d.vercel.app/",
-      category: "web",
-    },
-    {
-      id: 10,
-      title: "site web moderne",
-      description:
-        "J'ai développé un site web moderne avec React JS et Tailwind CSS, mettant en valeur une interface utilisateur dynamique, un design responsive et une performance optimisée. Ce projet illustre ma capacité à créer des interfaces interactives tout en assurant une expérience utilisateur fluide. J'ai également utilisé Tailwind CSS ,SASS ",
-      imageUrl: "ProjectWeb/images/5.png",
-      tags: ["React", "Tailwind CSS", "SASS"],
-      gitUrl: "https://github.com/alibia-phanuel/IphoneClone3d", // ← À corriger si besoin
-      demoUrl: "https://iphone-clone3d.vercel.app/", // ← À corriger si besoin
-      category: "web",
-    },
 
     {
-      id: 11,
+      id: 6,
       title: "Application pokemon via API",
       description:
         " j'ai développé une application Pokédex connectée à l'API PokéAPI. Elle affiche une liste de Pokémon avec recherche par nom ou numéro. Ce projet a renforcé mes compétences en gestion d'états, consommation d'API REST et optimisation des performances.",
