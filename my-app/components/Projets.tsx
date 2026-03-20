@@ -59,25 +59,23 @@ const Projets = () => {
       demoUrl: "",
       category: "web-mobile",
     },
-
     {
       id: 2,
-      title: "Plateforme Web & Mobile d’Automatisation Facebook → WhatsApp",
+      title: "Absolute SARL — Plateforme Immigration & Services",
       description:
-        "Développement d’une solution SaaS permettant d’automatiser la gestion des prospects générés par Pages et Publicités Facebook, avec une intégration directe sur WhatsApp..",
-      imageUrl: "ProjectWeb/images/7.jpg",
+        "Développement d'une plateforme web pour Absolute SARL, entreprise spécialisée dans les services d'immigration et de mobilité internationale. La plateforme offre une interface intuitive pour la gestion des services, la prise de rendez-vous et la communication avec les clients, tout en intégrant des fonctionnalités de suivi et de support en temps réel.",
+      imageUrl: "ProjectWeb/images/absolute.png",
       tags: [
         "Next.js 15",
-        "shadcn/ui",
-        "React Native (Expo)",
-        "Node.js · Express",
-        "MySQL · Sequelize",
-        "Facebook Graph API",
-        "WPPConnect",
+        "Node.js",
+        "typescript",
+        "PostgreSQL Prisma ",
+        "Vercel",
       ],
-      gitUrl: "https://github.com/alibia-phanuel/whatsapp-automation",
-      demoUrl: "https://github.com/alibia-phanuel/whatsapp-automation",
-      category: "web-mobile",
+      gitUrl:
+        "https://github.com/alibia-phanuel/afro_saga_client_mobil/blob/main/README.md",
+      demoUrl: "https://www.absolutesarl.com/fr",
+      category: "web",
     },
     {
       id: 3,
