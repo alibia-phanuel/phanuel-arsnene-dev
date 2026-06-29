@@ -7,7 +7,7 @@ declare global {
     gtag?: (
       command: "config" | "event",
       targetId: string,
-      params?: Record<string, unknown>
+      params?: Record<string, unknown>,
     ) => void;
   }
 }
@@ -41,7 +41,7 @@ export default function ContactSection() {
           </a>
           {/* WhatsApp */}
           <a
-            href="https://wa.me/237696603305?text=Bonjour%2C%20je%20vous%20contacte%20pour%20discuter%20d%27une%20opportunit%C3%A9%20ou%20d%27une%20question.%20Pouvez-vous%20me%20recontacter%20%3F"
+            href="https://wa.me/237653792143text=Bonjour%2C%20je%20vous%20contacte%20pour%20discuter%20d%27une%20opportunit%C3%A9%20ou%20d%27une%20question.%20Pouvez-vous%20me%20recontacter%20%3F"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent("click_whatsapp", "WhatsApp Contact")}

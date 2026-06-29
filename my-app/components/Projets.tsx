@@ -110,36 +110,6 @@ const Projets = () => {
       demoUrl: "",
       category: "mobile",
     },
-    {
-      id: 5,
-      title: "La passerelle → linding page pour app mobile ios & android",
-      description:
-        "Site vitrine professionnel pour l’entreprise La Passerelle, développé avec Next.js, offrant une version mobile ios et android a téléchargeable.",
-      imageUrl: "ProjectWeb/images/2.png",
-      tags: [
-        "Next.js 15",
-        "Tailwind CSS",
-        "Shadcn/ui",
-        "TypeScript",
-        "Google Analytics",
-      ],
-      gitUrl: "https://github.com/alibia-phanuel/passerelle-site",
-      demoUrl: "https://www.la-passerelle.co/",
-      category: "web",
-    },
-
-    {
-      id: 6,
-      title: "Application pokemon via API",
-      description:
-        " j'ai développé une application Pokédex connectée à l'API PokéAPI. Elle affiche une liste de Pokémon avec recherche par nom ou numéro. Ce projet a renforcé mes compétences en gestion d'états, consommation d'API REST et optimisation des performances.",
-      imageUrl: "ProjectWeb/images/6.jpg",
-      tags: ["React native", "expo", "typescript"],
-      gitUrl: "https://github.com/alibia-phanuel/PokeMonApp",
-      demoUrl:
-        "https://expo.dev/preview/update?message=remove&updateRuntimeVersion=1.0.0&createdAt=2024-12-01T18%3A19%3A52.235Z&slug=exp&projectId=5ee48caa-12c4-45ed-8772-f1f8c1e0c9b2&group=55a3db02-b47a-4b1f-968c-cbafe70286cc",
-      category: "mobile",
-    },
 
     // ── NOUVEAU PROJET AI ──
   ];

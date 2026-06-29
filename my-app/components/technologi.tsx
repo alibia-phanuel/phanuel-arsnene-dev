@@ -1,13 +1,11 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import "animate.css";
 import { FaReact, FaBrain, FaFileAlt } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiReact,
   SiTypescript,
-  SiMeta,
   SiNodedotjs,
   SiExpress,
   SiJest,
@@ -15,8 +13,6 @@ import {
   SiDocker,
   SiPostgresql,
   SiPrisma,
-  SiAdobepremierepro,
-  SiAdobeaudition,
 } from "react-icons/si";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
@@ -154,7 +150,7 @@ const Technologi = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (gridRef.current) {
@@ -170,7 +166,7 @@ const Technologi = () => {
 
   const handleMouseMove = (
     index: number,
-    e: React.MouseEvent<HTMLDivElement>
+    e: React.MouseEvent<HTMLDivElement>,
   ) => {
     const card = cardRefs.current[index];
     if (!card) return;
