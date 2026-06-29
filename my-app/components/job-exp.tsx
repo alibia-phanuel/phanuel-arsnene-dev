@@ -26,7 +26,12 @@ const JobExp = () => {
       country: "Cameroun",
       countryCode: "CM",
       workArrangement: "Temps plein · CDD",
-      socialLinks: {},
+      socialLinks: {
+        linkedin:
+          "https://www.linkedin.com/showcase/nevo-market/posts/?feedView=all",
+        instagram: "https://www.instagram.com/nevo_market_/",
+        facebook: "https://www.facebook.com/worldfarmsa",
+      },
     },
     {
       title: "Développement full-stack mobile",

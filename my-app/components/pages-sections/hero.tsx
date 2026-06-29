@@ -1,85 +1,93 @@
 "use client";
-import { FaFacebook, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 
+import { FaFacebook, FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
 import ParticlesHero from "./ParticleBackground";
+
 const Hero = () => {
   return (
-    <div className="text-white relative h-screen  items-center justify-center overflow-hidden flex">
+    <div className="relative flex h-screen items-center justify-center overflow-hidden text-white">
       <ParticlesHero />
-      <div className="relative z-10 flex flex-col items-center">
+
+      <div className="relative z-10 flex flex-col items-center px-4">
         <Image
           src="/phanuel.jpg"
-          alt="Phanuel Arsene - développeur full-stack"
+          alt="Phanuel Arsene"
           width={150}
           height={150}
           className="rounded-full border-8 border-[#0c0c4a]"
         />
-        <h1 className="text-2xl my-2 sm:text-4xl md:text-5xl lg:text-6xl text-center">
-          – Développeur – <br />
-          <span className="text-cyan-200  relative top-4">
-            JavaScript | TypeScript | Node.js
+
+        <h1 className="mt-6 text-center text-3xl font-bold leading-tight sm:text-5xl md:text-6xl">
+          Développeur d&apos;applications IA
+          <br />
+          <span className="relative top-3 text-cyan-200 text-2xl sm:text-4xl">
+            SaaS • Automatisation • Commerce
           </span>
         </h1>
-        <h2 className="mt-5 text-sm px-2 text-center sm:text-2xl font-medium flex items-center justify-center flex-wrap">
+
+        <p className="mt-12 max-w-4xl text-center text-base leading-relaxed sm:text-xl md:text-2xl">
           Salut, je suis{" "}
-          <strong className="text-cyan-200 px-2">Phanuel Arsene</strong>,
-          spécialiste en&nbsp;
-          <span className="text-cyan-200 pl-2 whitespace-nowrap">
+          <strong className="text-cyan-200">Phanuel Arsene</strong>. J&apos;aide les
+          entreprises à{" "}
+          <span className="inline-block text-cyan-200">
             <Typewriter
               options={{
                 strings: [
-                  "React",
-                  "Next.js",
-                  "ExpressJS",
-                  "Wix Studio",
-                  "Intégration IA",
-                  //  & automatisation
+                  "automatiser leurs ventes",
+                  "développer des solutions IA",
+                  "créer des applications métier",
+                  "concevoir des plateformes SaaS",
+                  "digitaliser leurs opérations",
+                  "développer des applications Web & Mobile",
                 ],
                 autoStart: true,
                 loop: true,
-                delay: 75,
-                deleteSpeed: 50,
-                wrapperClassName: "",
+                delay: 60,
+                deleteSpeed: 35,
               }}
             />
           </span>
-        </h2>
-        <div className="mt-6 flex space-x-8 text-cyan-200 text-3xl">
+        </p>
+
+        <div className="mt-10 flex space-x-8 text-3xl text-cyan-200">
           <a
             href="https://facebook.com/phanuelarsene"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
-            className="hover:text-cyan-400 transition"
+            className="transition hover:text-cyan-400"
           >
             <FaFacebook />
           </a>
+
           <a
             href="https://github.com/alibia-phanuel?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="hover:text-cyan-400 transition"
+            className="transition hover:text-cyan-400"
           >
             <FaGithub />
           </a>
+
           <a
             href="https://www.linkedin.com/in/phanuel-tsopze-8a33a52a4/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="hover:text-cyan-400 transition"
+            className="transition hover:text-cyan-400"
           >
             <FaLinkedin />
           </a>
+
           <a
             href="https://www.youtube.com/watch?v=ILGqRtSNR8g"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="YouTube"
-            className="hover:text-cyan-400 transition"
+            className="transition hover:text-cyan-400"
           >
             <FaYoutube />
           </a>
