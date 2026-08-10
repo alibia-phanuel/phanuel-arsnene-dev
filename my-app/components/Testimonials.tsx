@@ -26,15 +26,15 @@ const testimonials = [
     countryCode: "ca", // 🇫🇷 canada
   },
   {
-    name: "Christ Cargo International ",
+    name: "Super Cargo Services",
     role: "Client",
     feedback:
       "Alibia a créé pour nous une appli de tracking de colis claire, efficace et fiable. Toujours réactif et professionnel.",
-    photo: "/t2.jpg",
-    phone: "+237698391185",
-    whatsapp: "+237698391185",
-    facebook: "https://www.facebook.com/profile.php?id=100078607974251",
-    countryCode: "cm", // 🇸🇳 Sénégal
+    photo: "/t2.jpeg",
+    phone: "+237 650701567",
+    whatsapp: "+237 50701567",
+    facebook: "https://super-cargo-sercice-landing-page.vercel.app/",
+    countryCode: "cm", // 🇨🇲 Cameroun
   },
   {
     name: "Daboufatou Ayatolla",
@@ -48,7 +48,7 @@ const testimonials = [
     countryCode: "cm", // 🇲🇱 Mali
   },
   {
-    name: "la passerelle",
+    name: "La Passerelle",
     role: "Cheffe de projet",
     feedback:
       "Son sens du travail en équipe est exceptionnel. Il sait motiver et guider tout le monde.",
@@ -88,7 +88,7 @@ export default function TestimonialsCarousel() {
   const next = () => setCurrent((prev) => (prev + 1) % testimonials.length);
   const prev = () =>
     setCurrent(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
+      (prev) => (prev - 1 + testimonials.length) % testimonials.length,
     );
 
   // Gestion du drag (souris)
@@ -142,7 +142,7 @@ export default function TestimonialsCarousel() {
   // Fonction pour générer le lien WhatsApp avec un message par défaut
   const getWhatsAppUrl = (phone: string) => {
     const message = encodeURIComponent(
-      `Bonjour ${testimonials[current].name}, je vous contacte concernant votre témoignage pour Alibia.`
+      `Bonjour ${testimonials[current].name}, je vous contacte concernant votre témoignage pour Alibia.`,
     );
     return `https://wa.me/${phone}?text=${message}`;
   };

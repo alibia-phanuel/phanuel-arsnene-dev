@@ -8,14 +8,17 @@ import {
   SiTypescript,
   SiNodedotjs,
   SiExpress,
+  SiNestjs,
   SiJest,
   SiGoogleanalytics,
   SiDocker,
   SiPostgresql,
   SiPrisma,
+  SiMeta,
 } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-
+import { SiClaude } from "react-icons/si";
 const Technologi = () => {
   const technologies = [
     // Compétence principale
@@ -60,6 +63,13 @@ const Technologi = () => {
       category: "Compétence principale",
     },
     {
+      name: "NestJS",
+      icon: <SiNestjs className="w-12 h-12 text-red-500" />,
+      description:
+        "Framework Node.js progressif pour construire des API robustes, modulaires et évolutives avec TypeScript.",
+      category: "Compétence principale",
+    },
+    {
       name: "Jest",
       icon: <SiJest className="w-12 h-12 text-pink-500" />,
       description:
@@ -80,12 +90,12 @@ const Technologi = () => {
         "ORM moderne pour une interaction simplifiée avec les bases de données.",
       category: "Compétence secondaire",
     },
-    // Soft Skills LangChain
+    // Intégration IA - accélère le développement et fait gagner du temps
     {
       name: "Intégration IA",
       icon: <FaBrain className="w-12 h-12 text-purple-400" />,
       description:
-        "Création de fonctionnalités intelligentes et interactives avec GPT, Grok et autres outils IA pour apps web et mobiles.",
+        "J'utilise l'IA (GPT, Grok, Claude...) au quotidien pour accélérer le développement, automatiser les tâches répétitives et livrer plus vite sans sacrifier la qualité.",
       category: "Compétence principale",
     },
     {
@@ -109,29 +119,27 @@ const Technologi = () => {
         "Suivi et analyse des interactions utilisateurs pour optimiser les applications web et mobiles.",
       category: "Soft Skills",
     },
-    // {
-    //   name: "Facebook Ads",
-    //   icon: <SiMeta className="w-12 h-12 text-blue-600" />,
-    //   description:
-    //     "Mise en place et gestion de campagnes publicitaires pour rediriger efficacement vers des sites web et applications mobiles.",
-    //   category: "Soft Skills",
-    // },
-    // {
-    //   name: "Adobe Premiere Pro",
-    //   icon: <SiAdobepremierepro className="w-12 h-12 text-purple-600" />,
-    //   description:
-    //     "Montage vidéo professionnel pour créer des contenus visuels percutants.",
-    //   category: "Soft Skills",
-    // },
-    // {
-    //   name: "Adobe Audition",
-    //   icon: <SiAdobeaudition className="w-12 h-12 text-purple-600" />,
-    //   description:
-    //     "Édition et production audio pour des contenus sonores de haute qualité.",
-    //   category: "Soft Skills",
-    // },
+    {
+      name: "Facebook Ads",
+      icon: <SiMeta className="w-12 h-12 text-blue-600" />,
+      description:
+        "Mise en place et gestion de campagnes publicitaires pour rediriger efficacement vers des sites web et applications mobiles.",
+      category: "Soft Skills",
+    },
+    {
+      name: "VS Code + Claude Code",
+      icon: (
+        <div className="flex items-center justify-center gap-3">
+          <VscVscode className="w-10 h-10 text-blue-400" />
+          <SiClaude className="w-10 h-10 text-orange-400" />
+          {/* ou <ClaudeIcon className="w-10 h-10 text-orange-400" /> si SiClaude n'existe pas */}
+        </div>
+      ),
+      description:
+        "Environnement de développement optimisé avec Claude Code pour coder plus vite, automatiser le refactoring et déboguer efficacement.",
+      category: "Compétence principale",
+    },
   ];
-
   const [isVisible, setIsVisible] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const gridRef = useRef<HTMLDivElement>(null);
@@ -277,3 +285,8 @@ const Technologi = () => {
 };
 
 export default Technologi;
+const ClaudeIcon = ({ className }: { className?: string }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="currentColor">
+    <path d="M12 2L2 21h4.2l1.6-4h8.4l1.6 4H22L12 2zm0 5.5L15.6 15H8.4L12 7.5z" />
+  </svg>
+);

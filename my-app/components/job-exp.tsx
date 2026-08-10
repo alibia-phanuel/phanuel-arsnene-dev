@@ -22,7 +22,7 @@ const JobExp = () => {
       company: "WORLD FARM",
       description:
         "Développement, implémentation et maintenance de la plateforme e-commerce NEVO MARKET. Conception des fonctionnalités applicatives, analyse des besoins fonctionnels et techniques, maintenance corrective et évolutive, documentation et contribution à la qualité, la sécurité et la performance de la plateforme.",
-      duration: "Mai 2026 à aujourd'hui · 1 mois",
+      duration: "Mai 2026 à aujourd'hui ",
       country: "Cameroun",
       countryCode: "CM",
       workArrangement: "Temps plein · CDD",
@@ -50,15 +50,15 @@ const JobExp = () => {
     },
     {
       title: "Développeur Web & Mobile Freelance",
-      company: "Chris Gargo Internationale",
+      company: "Super Cargo Services",
       description:
-        "Développement d'une première version d'un SaaS pour la gestion de l'import/export de colis entre la Chine et l'Afrique. La solution a été développée pour l'entreprise et est en cours d'amélioration pour intégrer un système d'abonnement destiné à d'autres clients (multi-plateforme : web et mobile).",
+        "Développement d’une plateforme web et mobile dédiée à la gestion de l’import/export de colis entre la Chine et l’Afrique. Conception des fonctionnalités métier, gestion des colis, suivi des opérations et communication avec les clients. Évolution en cours vers une architecture multi-tenant, permettant à terme de proposer la solution à plusieurs entreprises sous forme de service.",
       duration: "Août. 2025 - novembre. 2025 · 4 mois",
       country: "Chine",
       countryCode: "CN",
       workArrangement: "À distance · Freelance",
       socialLinks: {
-        facebook: "https://www.facebook.com/profile.php?id=100078607974251",
+        facebook: "https://super-cargo-sercice-landing-page.vercel.app/",
       },
     },
     {

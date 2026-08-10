@@ -31,6 +31,7 @@ interface Project {
   links: ProjectLink[];
   category: Category;
   featured?: boolean;
+  current?: boolean; // 👈 projet en cours (poste actuel)
   roadmap?: RoadmapItem[];
 }
 
@@ -137,10 +138,17 @@ const FeaturedCard = ({
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >
-    {/* Featured label */}
-    <span className="absolute top-4 right-4 z-10 bg-amber-500/90 text-black text-[10px] font-bold px-2.5 py-0.5 rounded-full tracking-wide shadow-md">
-      ⭐ Featured Project
-    </span>
+    {/* Badges — Featured + Statut en cours */}
+    <div className="absolute top-4 right-4 z-10 flex flex-col items-end gap-2">
+      <span className="bg-amber-500/90 text-black text-[10px] font-bold px-2.5 py-0.5 rounded-full tracking-wide shadow-md">
+        ⭐ Featured Project
+      </span>
+      {project.current && (
+        <span className="bg-emerald-500/90 text-black text-[10px] font-bold px-2.5 py-0.5 rounded-full tracking-wide shadow-md flex items-center gap-1">
+          🟢 En parallèle · ~4h/jour
+        </span>
+      )}
+    </div>
 
     {/* Layout horizontal : image gauche, contenu droite */}
     <div className="flex flex-col md:flex-row">
@@ -222,13 +230,22 @@ const ProjectCard = ({
   onMouseLeave: () => void;
 }) => (
   <Card
-    className={`bg-gray-900 border-gray-800 text-gray-300 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl group relative overflow-hidden flex flex-col ${
-      isVisible ? "animate__animated animate__fadeInUp" : "opacity-0"
-    }`}
+    className={`bg-gray-900 text-gray-300 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl group relative overflow-hidden flex flex-col ${
+      project.current
+        ? "border-emerald-500/40 ring-1 ring-emerald-500/40 hover:ring-emerald-500/70"
+        : "border-gray-800"
+    } ${isVisible ? "animate__animated animate__fadeInUp" : "opacity-0"}`}
     style={{ animationDelay: `${index * 0.15}s` }}
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >
+    {/* Badge "poste actuel" */}
+    {project.current && (
+      <span className="absolute text-white top-3 left-3 z-10 bg-emerald-500/90  text-[10px] font-bold px-2.5 py-0.5 rounded-full tracking-wide shadow-md flex items-center gap-1">
+        🟢 Je travaille dessus
+      </span>
+    )}
+
     {/* Image */}
     <div className="relative h-44 shrink-0 overflow-hidden">
       <img
@@ -309,6 +326,8 @@ const PROJECTS: Project[] = [
     ],
     category: "ai",
     featured: true,
+    current: true,
+
     roadmap: [
       { icon: "done", label: "Architecture" },
       { icon: "done", label: "Auth" },
@@ -322,7 +341,56 @@ const PROJECTS: Project[] = [
     ],
   },
   {
+    id: 5,
+    title: "Nevo Market — Plateforme E-commerce 🛒",
+    subtitle: "Développeur Logiciel Full-Stack — World Farm",
+    description:
+      "Développement, implémentation et maintenance de la plateforme e-commerce NEVO MARKET. Conception des fonctionnalités applicatives, analyse des besoins fonctionnels et techniques, maintenance corrective et évolutive, documentation et contribution à la qualité, la sécurité et la performance de la plateforme.",
+    imageUrl: "ProjectWeb/images/nevo.png", // ⚠️ image temporaire — à remplacer par une vraie capture de app.nevo.market
+    tags: ["Frontend", "E-commerce", "World Farm", "Cameroun", "CDD"],
+    links: [
+      {
+        href: "https://app.nevo.market/",
+        label: "Voir la plateforme",
+        icon: "demo",
+        variant: "primary",
+      },
+    ],
+    category: "web",
+    current: true,
+  },
+  {
     id: 0,
+    title: "Absolute SARL — Plateforme Immigration & Services",
+    description:
+      "Plateforme web pour Absolute SARL : gestion des services d'immigration, prise de rendez-vous et support en temps réel.",
+    imageUrl: "ProjectWeb/images/absolute.png",
+    tags: [
+      "Next.js 15",
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL Prisma",
+      "Vercel",
+      "Express.js (backend REST API)",
+    ],
+    links: [
+      {
+        href: "https://github.com/alibia-phanuel/afro_saga_client_mobil/blob/main/README.md",
+        label: "Code",
+        icon: "github",
+        variant: "secondary",
+      },
+      {
+        href: "https://client-absolute-sarl.vercel.app/fr",
+        label: "Démo",
+        icon: "demo",
+        variant: "primary",
+      },
+    ],
+    category: "web",
+  },
+  {
+    id: 3,
     title:
       "RAG Assistant → Chatbot Intelligent avec IA sur vos Documents PDF 🤖",
     description:
@@ -358,7 +426,7 @@ const PROJECTS: Project[] = [
   },
   {
     id: 1,
-    title: "Christ Cargo International → Suivi de Colis Internationale 🌍",
+    title: "Super cargo service→ Suivi de Colis Internationale 🌍",
     description:
       "Solution complète pour Chrisht Cargo : suivi de colis, gestion des envois et communication client entre la Chine et l'Afrique.",
     imageUrl: "ProjectWeb/images/colis.png",
@@ -368,41 +436,14 @@ const PROJECTS: Project[] = [
       "React Native (Expo)",
       "Prisma · PostgreSQL · JWT Auth",
       "shadcn/ui",
+      "Code non public",
     ],
     links: [],
     category: "web-mobile",
   },
+
   {
-    id: 2,
-    title: "Absolute SARL — Plateforme Immigration & Services",
-    description:
-      "Plateforme web pour Absolute SARL : gestion des services d'immigration, prise de rendez-vous et support en temps réel.",
-    imageUrl: "ProjectWeb/images/absolute.png",
-    tags: [
-      "Next.js 15",
-      "Node.js",
-      "TypeScript",
-      "PostgreSQL Prisma",
-      "Vercel",
-    ],
-    links: [
-      {
-        href: "https://github.com/alibia-phanuel/afro_saga_client_mobil/blob/main/README.md",
-        label: "Code",
-        icon: "github",
-        variant: "secondary",
-      },
-      {
-        href: "https://www.absolutesarl.com/fr",
-        label: "Démo",
-        icon: "demo",
-        variant: "primary",
-      },
-    ],
-    category: "web",
-  },
-  {
-    id: 3,
+    id: 4,
     title:
       "FortibTech → App Mobile Mise en Relation Particuliers / Commerçants 💼",
     description:
@@ -414,16 +455,6 @@ const PROJECTS: Project[] = [
       "NestJS (backend) · JWT Auth",
       "Code non public",
     ],
-    links: [],
-    category: "mobile",
-  },
-  {
-    id: 4,
-    title: "FortibTech → Hodos — Parcours Découverte et Fidélisation Locale 📍",
-    description:
-      "App mobile française de parcours découverte : UI/UX React Native, Google Maps, défis gamifiés et récompenses commerçants.",
-    imageUrl: "ProjectWeb/images/hodos.png",
-    tags: ["React Native · Expo", "TypeScript · Axios", "Code non public"],
     links: [],
     category: "mobile",
   },

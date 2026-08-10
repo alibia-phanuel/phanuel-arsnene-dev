@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Mail, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 // Étendre le type global Window pour inclure gtag
 declare global {
   interface Window {
@@ -27,21 +27,12 @@ export default function ContactSection() {
       <div className="max-w-2xl mx-auto px-4">
         <h2 className="text-3xl font-bold mb-6">Contact</h2>
         <p className="mb-8 text-gray-300">
-          Vous pouvez me contacter par email ou WhatsApp pour toute demande. Je
+          Vous pouvez me contacter par  WhatsApp pour toute demande. Je
           m&apos;engage à répondre dans un délai maximum de 48 heures.
         </p>
         <div className="flex justify-center gap-4 flex-wrap">
-          {/* Email */}
           <a
-            href="mailto:phanuel.alibia@gmail.com"
-            onClick={() => trackEvent("click_email", "Email Contact")}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition"
-          >
-            <Mail className="w-4 h-4" /> Email
-          </a>
-          {/* WhatsApp */}
-          <a
-            href="https://wa.me/237653792143text=Bonjour%2C%20je%20vous%20contacte%20pour%20discuter%20d%27une%20opportunit%C3%A9%20ou%20d%27une%20question.%20Pouvez-vous%20me%20recontacter%20%3F"
+            href="https://wa.me/237653792143?text=Bonjour%2C%20je%20vous%20contacte%20pour%20discuter%20d%27une%20opportunit%C3%A9%20ou%20d%27une%20question.%20Pouvez-vous%20me%20recontacter%20%3F"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent("click_whatsapp", "WhatsApp Contact")}
