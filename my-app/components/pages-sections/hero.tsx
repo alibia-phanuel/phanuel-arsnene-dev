@@ -56,7 +56,7 @@ const Hero = () => {
 
         <div className="mt-10 flex space-x-8 text-3xl text-cyan-200">
           <a
-            href="https://github.com/alibia-phanuel?tab=repositories"
+            href="https://github.com/alibia-phanuel"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
