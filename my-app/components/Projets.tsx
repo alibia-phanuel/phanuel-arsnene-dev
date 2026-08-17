@@ -335,6 +335,7 @@ const PROJECTS: Project[] = [
       { icon: "progress", label: "Inventaire" },
       { icon: "progress", label: "Finance" },
       { icon: "progress", label: "WhatsApp" },
+      { icon: "progress", label: "livraison" },
       { icon: "locked", label: "IA" },
       { icon: "locked", label: "CRM" },
       { icon: "locked", label: "Analytics" },
