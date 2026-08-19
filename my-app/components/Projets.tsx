@@ -342,7 +342,7 @@ const PROJECTS: Project[] = [
     ],
   },
   {
-    id: 5,
+    id: 2,
     title: "Nevo Market — Plateforme E-commerce 🛒",
     subtitle: "Développeur Logiciel Full-Stack — World Farm",
     description:
@@ -360,6 +360,31 @@ const PROJECTS: Project[] = [
     category: "web",
     current: true,
   },
+  {
+    id: 1,
+    title: "Super cargo service→ Suivi de Colis Internationale 🌍",
+    description:
+      "Solution complète pour Chrisht Cargo : suivi de colis, gestion des envois et communication client entre la Chine et l'Afrique.",
+    imageUrl: "ProjectWeb/images/colis.png",
+    tags: [
+      "Next.js (frontend)",
+      "Express.js (backend REST API)",
+      "React Native (Expo)",
+      "Prisma · PostgreSQL · JWT Auth",
+      "shadcn/ui",
+      "Code non public",
+    ],
+    links: [
+      {
+        href: "https://www.supercargo-service.com/",
+        label: "Landing Page",
+        icon: "landing",
+        variant: "primary",
+      },
+    ],
+    category: "web-mobile",
+  },
+
   {
     id: 0,
     title: "Absolute SARL — Plateforme Immigration & Services",
@@ -384,6 +409,29 @@ const PROJECTS: Project[] = [
       {
         href: "https://client-absolute-sarl.vercel.app/fr",
         label: "Démo",
+        icon: "demo",
+        variant: "primary",
+      },
+    ],
+    category: "web",
+  },
+  {
+    id: 5,
+    title: "La Passerelle → Plateforme Multiservices 🚀",
+    description:
+      "Site vitrine pour La Passerelle : présentation de l'application mobile qui centralise plusieurs services (e-shop, location de véhicules, internet haut débit, services d'hygiène, placement de personnel) accessibles depuis une seule interface.",
+    imageUrl: "ProjectWeb/images/2.png",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Code non public",
+    ],
+    links: [
+      {
+        href: "https://la-passerelle.co/",
+        label: "Voir le site",
         icon: "demo",
         variant: "primary",
       },
@@ -424,23 +472,6 @@ const PROJECTS: Project[] = [
       },
     ],
     category: "ai",
-  },
-  {
-    id: 1,
-    title: "Super cargo service→ Suivi de Colis Internationale 🌍",
-    description:
-      "Solution complète pour Chrisht Cargo : suivi de colis, gestion des envois et communication client entre la Chine et l'Afrique.",
-    imageUrl: "ProjectWeb/images/colis.png",
-    tags: [
-      "Next.js (frontend)",
-      "Express.js (backend REST API)",
-      "React Native (Expo)",
-      "Prisma · PostgreSQL · JWT Auth",
-      "shadcn/ui",
-      "Code non public",
-    ],
-    links: [],
-    category: "web-mobile",
   },
 
   {
