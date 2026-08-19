@@ -33,7 +33,7 @@ const testimonials = [
     photo: "/t2.jpeg",
     phone: "+237 650701567",
     whatsapp: "+237 50701567",
-    facebook: "https://super-cargo-sercice-landing-page.vercel.app/",
+    facebook: "https://www.supercargo-service.com/",
     countryCode: "cm", // 🇨🇲 Cameroun
   },
   {
