@@ -294,10 +294,10 @@ const ProjectCard = ({
 const PROJECTS: Project[] = [
   {
     id: -1,
-    title: "Alibia Commerce AI OS",
-    subtitle: "Le système d'exploitation intelligent pour le commerce",
+    title: "ALIBIA OS",
+    subtitle: "Intelligent Operating System for modern organizations",
     description:
-      "AI Commerce Operating System conçu pour aider les commerçants à gérer leur activité depuis une plateforme unique. Il centralise l'inventaire, les ventes, les finances, les clients, WhatsApp et les futures fonctionnalités IA dans une architecture moderne, modulaire et multi-entreprise.",
+      "Système d'exploitation intelligent conçu pour centraliser les données, opérations et processus d'une organisation sur une plateforme unique. ALIBIA OS connecte les métiers, les données, l'analytics, l'IA et l'automatisation afin d'aider les organisations à mieux comprendre leur activité, prendre de meilleures décisions et agir plus rapidement. Le commerce constitue le premier vertical du produit.",
     imageUrl: "ProjectWeb/images/alibia-commerce.png",
     tags: [
       "NestJS",
@@ -307,6 +307,8 @@ const PROJECTS: Project[] = [
       "Prisma",
       "PostgreSQL",
       "AI",
+      "Analytics",
+      "Automation",
       "WhatsApp",
       "Multi-Tenant",
     ],
@@ -331,14 +333,16 @@ const PROJECTS: Project[] = [
     roadmap: [
       { icon: "done", label: "Architecture" },
       { icon: "done", label: "Auth" },
+      { icon: "done", label: "Multi-Tenant" },
       { icon: "done", label: "Business" },
-      { icon: "progress", label: "Inventaire" },
+      { icon: "progress", label: "Commerce" },
       { icon: "progress", label: "Finance" },
       { icon: "progress", label: "WhatsApp" },
-      { icon: "progress", label: "livraison" },
+      { icon: "progress", label: "Analytics" },
       { icon: "locked", label: "IA" },
       { icon: "locked", label: "CRM" },
-      { icon: "locked", label: "Analytics" },
+      { icon: "locked", label: "Automation" },
+      { icon: "locked", label: "Operations" },
     ],
   },
   {
