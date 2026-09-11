@@ -2,6 +2,7 @@
 "use client";
 import { useState } from "react";
 import { Sparkles, X, Send } from "lucide-react";
+import Image from "next/image";
 import { useChat } from "@ai-sdk/react";
 import {
   Conversation,
@@ -136,9 +137,20 @@ export default function AISidebar() {
               {/* Écran d'accueil */}
               {messages.length === 0 && (
                 <div className="flex flex-col items-center justify-center h-full text-center px-4">
-                  <div className="relative inline-block mb-8">
-                    <div className="absolute inset-0 bg-[#a2f4fd] rounded-full blur-3xl opacity-20 animate-pulse" />
-                    <Sparkles className="relative w-20 h-20 mx-auto text-[#a2f4fd]/70" />
+                  <div className="relative inline-block mb-7">
+                    <div className="absolute -inset-4 rounded-full bg-[#a2f4fd] opacity-20 blur-3xl animate-pulse" />
+                    <div className="relative overflow-hidden rounded-2xl border border-[#193cb8]/50 shadow-2xl shadow-[#193cb8]/30">
+                      <Image
+                        src="/images/hello-world-pixel.gif"
+                        alt="Illustration pixel art : un ordinateur portable affichant Hello World"
+                        width={192}
+                        height={192}
+                        unoptimized
+                        loading="lazy"
+                        className="pixelated h-36 w-36 sm:h-44 sm:w-44"
+                      />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#010104]/50 via-transparent to-transparent" />
+                    </div>
                   </div>
 
                   <h2 className="text-2xl font-bold text-white mb-3">
